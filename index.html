@@ -26,7 +26,8 @@
 
     <link href="third-party-assets/material-icons/material-icons.css" rel="stylesheet">
     <link href="third-party-assets/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="third-party-assets/mdl/material.min.css">
+    <link rel="stylesheet" href="third-party-assets/mdl/material.css">
+    <link rel="stylesheet" href="third-party-assets/materialize/styles/materialize.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <style>
         #view-source {
@@ -112,6 +113,18 @@
         </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
+        <form action="#">
+            <div class="switch">
+                <label>
+                    pt
+                    <input id="languageSelector" type="checkbox" checked/>
+                <span class="lever">
+                </span>
+                    en
+                </label>
+            </div>
+        </form>
+        <h1 data-i18n="msg_welcome">Not supposed to show</h1>
         <div class="mdl-grid demo-content">
             <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
                 <svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1"
@@ -276,6 +289,8 @@
 <script src="third-party-assets/jquery/jquery-2.1.4.min.js"></script>
 <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
 <script src="third-party-assets/mdl/material.min.js"></script>
+<script src="third-party-assets/materialize/js/materialize.min.js"></script>
 <script src="third-party-assets/charts/Chart.js"></script>
+<script src="assets/js/language_selector.js"></script>
 </body>
 </html>
