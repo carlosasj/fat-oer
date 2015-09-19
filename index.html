@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -27,8 +27,11 @@
     <link href="third-party-assets/material-icons/material-icons.css" rel="stylesheet">
     <link href="third-party-assets/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="third-party-assets/mdl/material.css">
-    <link rel="stylesheet" href="third-party-assets/materialize/styles/materialize.css">
+    <!-- <link rel="stylesheet" href="third-party-assets/materialize/styles/materialize.css"> -->
     <link rel="stylesheet" href="assets/styles/styles.css">
+
+    <script src="third-party-assets/jquery/jquery-2.1.4.min.js"></script>
+    <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
     <style>
         #view-source {
             position: fixed;
@@ -42,41 +45,49 @@
     </style>
 </head>
 <body>
-<div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper mdl-color--cyan-900">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" data-activates="sideways-navbar" class="button-collapse"><i class="material-icons">menu</i></a>
-            <i class="material-icons right right-aligned">language</i>
 
-            <form action="#" class="right">
-                <div class="switch">
-                    <label>
-                        pt
-                        <input id="languageSelector" type="checkbox" checked/>
-                        <span class="lever"></span>
-                        en
-                    </label>
-                </div>
-            </form>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>
-            <ul class="side-nav" id="sideways-navbar">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Sistema de arquivos FAT</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="#fat8">FAT 8</a>
+                <a class="mdl-navigation__link" href="#fat12">FAT 12</a>
+                <a class="mdl-navigation__link" href="#fat16">FAT 16</a>
+                <a class="mdl-navigation__link" href="#fat32">FAT 32</a>
+                <a class="mdl-navigation__link" href="#compare">Comparação</a>
+
+                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                    <li class="mdl-menu__item">
+                        PT
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="languageSelector">
+                            <input type="checkbox" id="languageSelector" class="mdl-switch__input" checked />
+                        </label>
+                        EN
+                    </li>
+                    <li class="mdl-menu__item">Another Action</li>
+                    <li disabled class="mdl-menu__item">Disabled Action</li>
+                    <li class="mdl-menu__item">Yet Another Action</li>
+                </ul>
+
+            </nav>
         </div>
-    </nav>
-</div>
-
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    </header>
+    <div class="mdl-layout__drawer">
+        <p>
+            Aqui vai aquele texto legal que a gente excreveu para o primeiro relatório.
+        </p>
+    </div>
+    <!-- Sidenav antiga. Apagar quando a nova sidenav estiver pronta -->
+    
+    <!-- <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
             <img src="http://www.getmdl.io/templates/dashboard/images/user.jpg" class="demo-avatar">
 
@@ -119,7 +130,7 @@
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
                                                        role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
-    </div>
+    </div> -->
     <main class="mdl-layout__content mdl-color--grey-100">
         <h1 data-i18n="msg_welcome">Not supposed to show</h1>
         <div class="mdl-grid demo-content">
@@ -283,12 +294,10 @@
         </g>
     </defs>
 </svg>
-<script src="third-party-assets/jquery/jquery-2.1.4.min.js"></script>
-<script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
 <script src="third-party-assets/mdl/material.min.js"></script>
-<script src="third-party-assets/materialize/js/materialize.min.js"></script>
+<!-- <script src="third-party-assets/materialize/js/materialize.min.js"></script> -->
 <script src="third-party-assets/charts/Chart.js"></script>
 <script src="assets/js/language_selector.js"></script>
-<script src="assets/js/navbar_wrapper.js"></script>
+<!-- <script src="assets/js/navbar_wrapper.js"></script> -->
 </body>
 </html>
