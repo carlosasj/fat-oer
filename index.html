@@ -42,32 +42,40 @@
     </style>
 </head>
 <body>
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-    <header class="demo-header mdl-layout__header mdl-color--white mdl-color--grey-100 mdl-color-text--grey-600">
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Home</span>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper mdl-color--cyan-900">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-activates="sideways-navbar" class="button-collapse"><i class="material-icons">menu</i></a>
+            <i class="material-icons right right-aligned">language</i>
 
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-                <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-                    <i class="material-icons">search</i>
-                </label>
-
-                <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" id="search"/>
-                    <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            <form action="#" class="right">
+                <div class="switch">
+                    <label>
+                        pt
+                        <input id="languageSelector" type="checkbox" checked/>
+                        <span class="lever"></span>
+                        en
+                    </label>
                 </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-                <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li class="mdl-menu__item">About</li>
-                <li class="mdl-menu__item">Contact</li>
-                <li class="mdl-menu__item">Legal information</li>
+            </form>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+            <ul class="side-nav" id="sideways-navbar">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
             </ul>
         </div>
-    </header>
+    </nav>
+</div>
+
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
             <img src="http://www.getmdl.io/templates/dashboard/images/user.jpg" class="demo-avatar">
@@ -113,17 +121,6 @@
         </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
-        <form action="#">
-            <div class="switch">
-                <label>
-                    pt
-                    <input id="languageSelector" type="checkbox" checked/>
-                <span class="lever">
-                </span>
-                    en
-                </label>
-            </div>
-        </form>
         <h1 data-i18n="msg_welcome">Not supposed to show</h1>
         <div class="mdl-grid demo-content">
             <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
@@ -292,5 +289,6 @@
 <script src="third-party-assets/materialize/js/materialize.min.js"></script>
 <script src="third-party-assets/charts/Chart.js"></script>
 <script src="assets/js/language_selector.js"></script>
+<script src="assets/js/navbar_wrapper.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ $('#languageSelector').click(function () {
 
 // leave blank to use default language (en)
 function changeLanguage(lang) {
-    lang = lang || 'en'; // if no language is set, use default (en)
+    lang = lang || ''; // if no language is set, use default (en)
 
     $.i18n.properties({
         name    : 'Messages',
