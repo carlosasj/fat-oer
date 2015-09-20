@@ -1,3 +1,7 @@
+function getJson(msg) {
+
+}
+
 function refresh_i18n() {
     $("[data-i18n]").each(function () {
         var prop = $(this).data('i18n');
@@ -11,7 +15,6 @@ function changeLanguage(lang) {
     lang = lang || "en"; // if no language is set, use default (en)
     console.log("Lang >> "+lang);
     $.i18n.properties({
-        name    : 'Messages',
         path    : 'languages/',
         mode    : 'both',
         language: lang,
