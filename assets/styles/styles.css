@@ -25,3 +25,22 @@ html, body {
 .mdl-menu__item .mdl-switch {
     width: 37px;
 }
+
+#nav-button {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 35px;
+    margin-right: 50px;
+    z-index: 900;
+}
+
+
+
+@media (min-width: 1025px) {
+    #nav-button.mdl-layout--large-screen-hide,
+    .mdl-layout--large-screen-hide {
+        display: none;
+    }
+}

@@ -36,6 +36,19 @@
 </head>
 <body data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
 
+<button id="nav-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-layout--large-screen-hide">
+    <i class="material-icons">add</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
+    <a href="#"><li class="mdl-menu__item" data-i18n="top">Top</li></a>
+    <a href="#fat8"><li class="mdl-menu__item">FAT8</li></a>
+    <a href="#fat12"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="#fat16"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="#fat32"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="#compare"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
+</ul>
+
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
