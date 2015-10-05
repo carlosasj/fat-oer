@@ -22,6 +22,10 @@ html, body {
     max-width: 1000px;
 }
 
+.mdl-menu.mdl-js-menu a {
+    text-decoration: none;
+}
+
 .mdl-menu__item .mdl-switch {
     width: 37px;
 }
@@ -36,11 +40,24 @@ html, body {
     z-index: 900;
 }
 
-
-
 @media (min-width: 1025px) {
     #nav-button.mdl-layout--large-screen-hide,
     .mdl-layout--large-screen-hide {
         display: none;
     }
+}
+
+.shift0 {
+    -webkit-transform: rotateX(70deg);
+    transform: rotateX(70deg);
+}
+
+.shift1 {
+    -webkit-transform: rotateX(70deg) translateY(30px);
+    transform: rotateX(70deg) translateY(30px);
+}
+
+.shift2 {
+    -webkit-transform: rotateX(70deg) translateY(60px);
+    transform: rotateX(70deg) translateY(60px);
 }

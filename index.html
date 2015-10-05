@@ -34,7 +34,7 @@
     <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
     <script src="third-party-assets/scrollspy/jquery-scrollspy.js"></script>
 </head>
-<body data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
+<body>
 
 <button id="nav-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-layout--large-screen-hide">
     <i class="material-icons">add</i>
@@ -57,17 +57,17 @@
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="#fat8">FAT8</a>
-                <a class="mdl-navigation__link" href="#fat12">FAT12</a>
-                <a class="mdl-navigation__link" href="#fat16">FAT16</a>
-                <a class="mdl-navigation__link" href="#fat32">FAT32</a>
-                <a class="mdl-navigation__link" href="#compare" data-i18n="compare">Compare</a>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat8">FAT8</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat12">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat16">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat32">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#compare" data-i18n="compare">Compare</a>
 
-                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+                <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
                     <i class="material-icons">more_vert</i>
                 </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="more-options">
                     <li class="mdl-menu__item">
                         PT
                         <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="languageSelector">
@@ -88,53 +88,8 @@
             Aqui vai aquele texto legal que a gente excreveu para o primeiro relatório.
         </p>
     </div>
-    <!-- Sidenav antiga. Apagar quando a nova sidenav estiver pronta -->
 
-    <!-- <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-            <img src="http://www.getmdl.io/templates/dashboard/images/user.jpg" class="demo-avatar">
-
-            <div class="demo-avatar-dropdown">
-                <span>hello@example.com</span>
-
-                <div class="mdl-layout-spacer"></div>
-                <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons" role="presentation">arrow_drop_down</i>
-                    <span class="visuallyhidden">Accounts</span>
-                </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item">hello@example.com</li>
-                    <li class="mdl-menu__item">info@example.com</li>
-                    <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
-                </ul>
-            </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">home</i>Home</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">inbox</i>Inbox</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">delete</i>Trash</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">report</i>Spam</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">forum</i>Forums</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">flag</i>Updates</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">local_offer</i>Promos</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">shopping_cart</i>Purchases</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">people</i>Social</a>
-
-            <div class="mdl-layout-spacer"></div>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
-                                                       role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        </nav>
-    </div> -->
-    <main class="mdl-layout__content mdl-color--grey-100">
+    <main class="mdl-layout__content mdl-color--grey-100" data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
         <div class="mdl-grid container">
             <section class="mdl-cell mdl-cell--12-col" id="welcome">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="msg_welcome">Not supposed to show</h2>
@@ -142,6 +97,7 @@
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">This is a title</h2>
                     </div>
+
                     <div class="mdl-card__supporting-text">
                         this is a sample text, ok?
                     </div>
@@ -192,31 +148,7 @@
 </div>
 
 <script src="third-party-assets/mdl/material.min.js"></script>
-<!-- <script src="third-party-assets/materialize/js/materialize.min.js"></script> -->
 <script src="third-party-assets/charts/Chart.js"></script>
 <script src="assets/js/language_selector.js"></script>
-<!-- <script src="assets/js/navbar_wrapper.js"></script> -->
-<script type='text/javascript'>
-$(document).ready(function() {
-    $('section').each(function(i) {
-        var position = $(this).position();
-        console.log($(this).attr('id'));
-        console.log(position);
-        console.log('min: ' + position.top + ' / max: ' + parseInt(position.top + $(this).height()));
-        $(this).scrollspy({
-            min: position.top,
-            max: position.top + $(this).height(),
-            onEnter: function(element, position) {
-                console.log('entering ' +  element.id);
-                $(this).css('background-color', "#AAA");
-            },
-            onLeave: function(element, position) {
-                console.log('leaving ' +  element.id);
-                $(this).css('background-color', "none");
-            }
-        });
-    });
-});
-</script>
 </body>
 </html>
