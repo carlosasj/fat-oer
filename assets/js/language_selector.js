@@ -21,7 +21,6 @@ function changeLanguage(lang) {
         callback: refresh_i18n
     });
 }
-
 $(document).ready(function(){
     // Initialize with default language
     changeLanguage();
@@ -29,5 +28,13 @@ $(document).ready(function(){
     $('#languageSelector').click(function () {
         var sel = $('#languageSelector').prop('checked') ? "en" : "pt";
         changeLanguage(sel);
+    });
+
+    $('[data-control-pair]').keyup(function updatePair() {
+        var pairID = $(this).data('control-pair')
+        var otherInput = $('#'+pairID);
+        if($(this).val() != otherInput.val()){
+            otherInput[0].MaterialSlider.change($(this).val());
+        }
     });
 });
