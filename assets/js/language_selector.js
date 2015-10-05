@@ -22,12 +22,25 @@ function changeLanguage(lang) {
     });
 }
 
+function browserSupportsStorage() {
+    return (typeof(Storage) !== "undefined")
+}
+
 $(document).ready(function(){
+
+    var lang = "en";
+
+    if (browserSupportsStorage()){
+        lang = localStorage.getItem("language") || "en";
+        localStorage.setItem("language", lang)
+    }
+
     // Initialize with default language
     changeLanguage();
 
     $('#languageSelector').click(function () {
         var sel = $('#languageSelector').prop('checked') ? "en" : "pt";
+        localStorage.setItem("language", sel);
         changeLanguage(sel);
     });
 });

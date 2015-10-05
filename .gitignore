@@ -71,6 +71,9 @@ $RECYCLE.BIN/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# Ignore local stylesheets
+/third-party-assets/stylesheets/*
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
