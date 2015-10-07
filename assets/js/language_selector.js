@@ -30,11 +30,13 @@ $(document).ready(function(){
         changeLanguage(sel);
     });
 
-    $('[data-control-pair]').keyup(function updatePair() {
+    $('[data-control-pair][type="text"]').keyup(function updatePair() {
         var pairID = $(this).data('control-pair')
-        var otherInput = $('#'+pairID);
-        if($(this).val() != otherInput.val()){
-            otherInput[0].MaterialSlider.change($(this).val());
-        }
+        $('#'+pairID)[0].MaterialSlider.change($(this).val());
+    });
+
+    $('[data-control-pair][type="range"]').mousemove(function updatePair() {
+        var pairID = $(this).data('control-pair')
+        $('#'+pairID).val($(this).val());
     });
 });
