@@ -119,9 +119,9 @@
                                    min="0" max="100" value="0"/>
                             <div class="mdl-textfield mdl-js-textfield">
                                 <input id="block-size-fat12a" data-control-pair="block-size-fat12b" class="mdl-textfield__input" type="text"
-                                            min="0" max="100" oninvalid="setCustomValidity('ow, til... bota direito!')" required=""
-                                        pattern="[0-9]{10}"/>
-                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            min="0" max="100" value="0" required=""
+                                        pattern="^(?:[0-9]|[1-9][0-9]|100)$"/>
+                                <span class="mdl-textfield__error" data-i18n="wrong-input-value-number">Input is not a number!</span>
                             </div>
                         </form>
                         <canvas id="chart-memory-1" width="400" height="400"></canvas>
