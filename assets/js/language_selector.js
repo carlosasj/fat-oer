@@ -21,7 +21,6 @@ function changeLanguage(lang) {
         callback: refresh_i18n
     });
 }
-
 $(document).ready(function(){
     // Initialize with default language
     changeLanguage();
@@ -29,5 +28,15 @@ $(document).ready(function(){
     $('#languageSelector').click(function () {
         var sel = $('#languageSelector').prop('checked') ? "en" : "pt";
         changeLanguage(sel);
+    });
+
+    $('[data-control-pair][type="text"]').keyup(function updatePair() {
+        var pairID = $(this).data('control-pair')
+        $('#'+pairID)[0].MaterialSlider.change($(this).val());
+    });
+
+    $('[data-control-pair][type="range"]').mousemove(function updatePair() {
+        var pairID = $(this).data('control-pair')
+        $('#'+pairID).val($(this).val());
     });
 });
