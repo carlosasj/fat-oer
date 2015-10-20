@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="third-party-assets/stylesheets/mdl.css"/>
     <link rel="stylesheet" href="assets/styles/styles.css">
 
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
@@ -41,7 +42,6 @@
 
 <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
     <a href="#"><li class="mdl-menu__item" data-i18n="top">Top</li></a>
-    <a href="#fat8"><li class="mdl-menu__item">FAT8</li></a>
     <a href="#fat12"><li class="mdl-menu__item">FAT12</li></a>
     <a href="#fat16"><li class="mdl-menu__item">FAT16</li></a>
     <a href="#fat32"><li class="mdl-menu__item">FAT32</li></a>
@@ -57,7 +57,6 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat8">FAT8</a>
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat12">FAT12</a>
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat16">FAT16</a>
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="#fat32">FAT32</a>
@@ -90,53 +89,69 @@
 
     <main class="mdl-layout__content mdl-color--grey-100" data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
         <div class="mdl-grid container">
-            <section class="mdl-cell mdl-cell--12-col" id="welcome">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="msg_welcome">Not supposed to show</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">This is a title</h2>
                     </div>
-
                     <div class="mdl-card__supporting-text">
                         this is a sample text, ok?
                     </div>
                 </div>
-            </section>
-            <section class="mdl-cell mdl-cell--12-col" id="fat8">
-                <h2 class="mdl-cell mdl-cell--12-col">FAT 8</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
             </section>
-            <section class="mdl-cell mdl-cell--12-col" id="fat12">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat12">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 12</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
             </section>
-            <section class="mdl-cell mdl-cell--12-col" id="fat16">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat16">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 16</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
             </section>
-            <section class="mdl-cell mdl-cell--12-col" id="fat32">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat32">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 32</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
             </section>
-            <section class="mdl-cell mdl-cell--12-col" id="compare">
-                <h2 data-i18n="compare">Comparação</h2>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="compare">
+                <h2 class="mdl-cell mdl-cell--12-col" data-i18n="compare">Comparação</h2>
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
