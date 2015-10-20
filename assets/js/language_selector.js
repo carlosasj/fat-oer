@@ -74,8 +74,8 @@ $(document).ready(function(){
             color:"#46BFBD",
             highlight: "#5AD3D1",
             label: "Consumido"
-        },
-    ]
+        }
+    ];
     var context = $('#chart-memory-1').get(0).getContext("2d");
     var chartMemory1 = new Chart(context).Doughnut(data,{
         animateRotate : false,
