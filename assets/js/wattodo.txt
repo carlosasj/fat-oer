@@ -1,0 +1,2 @@
+ - Controle para tamanho do disco
+ - Controle para tamanho do bloco
