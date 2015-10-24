@@ -2,12 +2,10 @@ var FileAllocator = function (FAT, disk, fileList) {
     this.fat = FAT;
     this.disk = disk;
     this.fileList = fileList;
-};
 
-FileAllocator.prototype.setSizes = function(blockSize, diskSize) {
-    this.blockSize = blockSize;
-    this.diskSize = diskSize;
-    this.numberOfBlocks = diskSize/blockSize;
+    this.blockSize = disk.getBlockSize();
+    this.diskSize = disk.getDiskSize();
+    this.numberOfBlocks = disk.getNumberOfBlocks();
 };
 
 FileAllocator.prototype.addNewFile = function(fileName, size, color) {
@@ -21,16 +19,15 @@ FileAllocator.prototype.addNewFile = function(fileName, size, color) {
         blocks[i] = this.disk.findFirstEmptyBlock((i != 0)?blocks[i-1]:0);
     }
 
-    // add the file to FAT
-    //TODO FATTTY
-    this.fat.addFile(blocks);
-
     // create file and add it to file list
-    var file = new File(fileName, size, color, blocks[0]);
+    var file = new File(fileName, size, color, blocks);
     this.fileList.addNewFile(file);
 
+    // add the file to FAT
+    this.fat.addFile(file);
+
     // add file to disk
-    this.disk.addNewFile(file, blocks);
+    this.disk.addNewFile(file);
 
 };
 

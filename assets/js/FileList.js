@@ -17,7 +17,7 @@ FileList.prototype.findFile = function(fileName) {
 
 FileList.prototype.findFileIndex = function(fileName) {
     var index;
-    for (i = 0; i < this.files.length; i++){
+    for (var i = 0; i < this.files.length; i++){
         if(this.files[i].getName == fileName) {
             index = i;
             break;
