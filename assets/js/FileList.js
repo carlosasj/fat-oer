@@ -1,4 +1,4 @@
-var FileList = function () {
+var FileList = function() {
     this.files = [];
 };
 
@@ -16,13 +16,15 @@ FileList.prototype.findFile = function(fileName) {
 };
 
 FileList.prototype.findFileIndex = function(fileName) {
-    var index;
+    var index = -1;
     for (var i = 0; i < this.files.length; i++){
-        if(this.files[i].getName == fileName) {
+        if(this.files[i].getFileName() == fileName) {
             index = i;
             break;
         }
     }
+    console.log("got index: "+ index + " and file " + this.files[index].getFileName());
+    return index;
 };
 
 
