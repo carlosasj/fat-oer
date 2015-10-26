@@ -7,7 +7,7 @@ FAT-16
    Essa versão de FAT dispõe de 16 bits para mapear cada partição na tabela de alocação e foram adicionados o suporte para blocos com 8 KB, 16KB e 32KB de tamanho. O espaço máximo que essa geração suporta é de 2GB (2^16 x 32KB), por tanto um disco de capacidade máxima de 4 partições de 2GB ou 8GB no total.
    
 FAT-32
-   Essa versão de FAT dispões de 28 bits para mapear cada partição na tabela de alocação. O espaço máximo que essa geração suporta é de 2 TB (2^28 x 32KB) por partições, permitindo um disco de no máximo 8 TB (4 partições de 2 TB cada).
+   Essa versão de FAT dispõe de 28 bits para mapear cada partição na tabela de alocação. O espaço máximo que essa geração suporta é de 2 TB (2^28 x 32KB) por partições, permitindo um disco de no máximo 8 TB (4 partições de 2 TB cada).
 
 
 
