@@ -23,7 +23,7 @@ FileList.prototype.findFileIndex = function(fileName) {
             break;
         }
     }
-    console.log("got index: "+ index + " and file " + this.files[index].getFileName());
+    //console.log("got index: "+ index + " and file " + this.files[index].getFileName());
     return index;
 };
 

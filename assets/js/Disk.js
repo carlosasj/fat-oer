@@ -23,7 +23,7 @@ Disk.prototype.removeFile = function(file) {
 
 Disk.prototype.findFirstEmptyBlock = function(startFrom) {
     for (var i = startFrom; i < this.numberOfBlocks; i++){
-        console.log("()("+i+") testing for '"+this.blocks[i].getColor()+"'");
+        //console.log("()("+i+") testing for '"+this.blocks[i].getColor()+"'");
         if (this.blocks[i].getColor() == null){
             return i;
         }
