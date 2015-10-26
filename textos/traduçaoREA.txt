@@ -1,7 +1,7 @@
 ﻿In general, FAT maps the disk's partitions using two concepts: 
 
 	The first one is cluster, which reffers to the size of the disk's blocks. In this system, just multiples of 512 KB are used.
-	The second one is a table that remains in the main memory and have one entry for each disk's block existent in the partition. Which entry is made by 32 bytes that storage the name of the file, control bits, metadata and the disk's block location that reffers to the beggining of the file. The system works like a linked list. Each block has its share of data of a file and a pointer to the next block (reffered to the same file). The pointer points to �end of file� when the file has ended or indicates that the file was corrupted, providing in this situation more information about the issue.
+	The second one is a table that remains in the main memory and have one entry for each disk's block existent in the partition. Which entry is made by 32 bytes that storage the name of the file, control bits, metadata and the disk's block location that reffers to the beggining of the file. The system works like a linked list. Each block has its share of data of a file and a pointer to the next block (reffered to the same file). The pointer points to "end of file" when the file has ended or indicates that the file was corrupted, providing in this situation more information about the issue.
 
 FAT-12
 
