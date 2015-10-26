@@ -13,7 +13,7 @@ function refresh_i18n() {
 // leave blank to use default language (en)
 function changeLanguage(lang) {
     lang = lang || "en"; // if no language is set, use default (en)
-    console.log("Lang >> "+lang);
+    //console.log("Lang >> "+lang);
     $.i18n.properties({
         path    : 'languages/',
         mode    : 'both',
@@ -36,7 +36,7 @@ $(document).ready(function(){
     }
 
     // Initialize with default language
-    changeLanguage();
+    changeLanguage(lang);
 
     $('#languageSelector').click(function () {
         var sel = $('#languageSelector').prop('checked') ? "en" : "pt";
