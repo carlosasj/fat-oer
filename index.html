@@ -99,21 +99,27 @@
                         this is a sample text, ok?
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard flipcard" id="config-card">
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
                     <div class="mdl-card__supporting-text front mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--12-col">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="disk-blocknumber" value=0 />
                                 <label class="mdl-textfield__label" for="disk-blocknumber" data-i18n="blocknumber">Number of blocks</label>
                                 <span class="mdl-textfield__error">Input is not a number!</span>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-slider mdl-js-slider" type="range" value="4" min="4" max="32" step="4"/>
+                        <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                            <div class="breakpoints-group mdl-cell mdl-cell--12-col">
+                                <div class="breakpoint bp-0">4 KB</div>
+                                <div class="breakpoint bp-33">8 KB</div>
+                                <div class="breakpoint bp-66">16 KB</div>
+                                <div class="breakpoint bp-100">32 KB</div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <input class="mdl-slider mdl-js-slider" type="range" value="0" min="0" max="3" step="1"/>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--12-col">
                             <p><span data-i18n="totalsize">Total Size:</span> <span id="display-disksize">0 KB</span></p>
                         </div>
                         <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">

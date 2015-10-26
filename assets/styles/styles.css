@@ -109,3 +109,27 @@ html, body {
     background: blue;
     height: 100%;
 }
+
+.breakpoints-group {
+    /*padding: 0 2em;*/
+    /*overflow: auto;*/
+}
+
+.breakpoint {
+    background: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    float: left;
+    position: relative;
+}
+
+.bp-0 { left: calc(0%); }
+.bp-33 { left: calc(33.333% - 65px); }
+.bp-66 { left: calc(66.666% - 130px); }
+.bp-100 { left: calc(100% - 195px); }
