@@ -1,3 +1,3 @@
 function flipcard(element) {
-    // body...
+    $(element).toggleClass("flip-on");
 }
