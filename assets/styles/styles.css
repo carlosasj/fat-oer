@@ -63,3 +63,7 @@ html, body {
     -webkit-transform: rotateX(70deg) translateY(60px);
     transform: rotateX(70deg) translateY(60px);
 }
+
+#config-card:target {
+    background: blue;
+}

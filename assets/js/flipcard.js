@@ -1,0 +1,3 @@
+function flipcard(element) {
+    // body...
+}
