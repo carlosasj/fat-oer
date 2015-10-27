@@ -51,6 +51,14 @@ html, body {
 .sidecard, .maincard{
     min-height: 80vh;
 }
+
+.sidecard {
+    display: none;
+}
+.show-sidecard {
+    display: block;
+}
+
 .mdl-menu.mdl-js-menu a {
     text-decoration: none;
 }
