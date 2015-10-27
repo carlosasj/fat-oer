@@ -1,4 +1,4 @@
-﻿In general, FAT maps the disk's partitions using two components. The first one is the concept of cluster, which refers to the set of blocks such that its size is a multiple of 512 bytes. The second is a table which remains in the main memory and has one entry for each disk's block or an indicator of "end of file". Given a directory entry, that has the number of the first file's block, the OS indexes the block in the FAT and reads the place of the next block in the same file, if it exists.
+﻿In general, FAT maps the disk's partitions using two components. The first one is the concept of cluster, which reffers to the set of blocks such that its size is a multiple of 512 bytes. The second is a table which remains in the main memory and has one entry for each disk's block or an indicator of "end of file". Given a directory entry, that has the number of the first file's block, the OS indexes the block in the FAT and reads the place of the next block in the same file, if it exists.
 
 FAT-12
 
