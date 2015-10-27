@@ -1,9 +1,7 @@
 function get_slider_value(slider) {
-    console.log("oi");
     var sli = $(slider);
     var value_raw = sli.val();
     var list_values = sli.data('listvalues').split(';');
-    console.log(parseInt(list_values[value_raw]));
     return parseInt(list_values[value_raw]);
 }
 

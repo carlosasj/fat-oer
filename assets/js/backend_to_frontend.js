@@ -16,7 +16,7 @@ function initialize_disk(numberOfBlocks){
 
 function addFile(name, size, color){
     fs.addFile(name, size, color);
-    add_file_list_entry(name);
+    add_file_list_entry(name, color);
     update_fat();
     update_disk();
 }
@@ -26,8 +26,8 @@ function update_fat(){
     var fatField = $('#')
 }
 
-function add_file_list_entry(fileName){
-    var entry = "<tr> <td class=\"file-entry\"><a data-file=\"" +fileName+ "\" class=\"remove-file-button\" href=\"#\"><i class=\"material-icons\">close</i></a>"+ fileName +"</td></tr>";
+function add_file_list_entry(fileName, color){
+    var entry = "<tr class=\""+color+"\"> <td class=\"file-entry\"><a data-file=\"" +fileName+ "\" class=\"remove-file-button\" href=\"#\"><i class=\"material-icons\">close</i></a>"+ fileName +"</td></tr>";
     $('#file-list-container')[0].innerHTML += entry;
 }
 
@@ -59,11 +59,11 @@ function createFileSystem(blockSize, numberOfBlocks) {
 function handle_apply_add_file(){
     var nameField = $('#add-file-name');
     var sizeField = $('#add-file-size');
-    //var colorField = ???;
+    var colorField = $('#file-color');
 
     var name = nameField.val();
     var size = sizeField.val();
-    //var color = colorField.???();
+    var colorClass = color_to_class(colorField.val());
 
     if (name == "" || size == ""){
         alert("vaitomarnocu");
@@ -75,7 +75,5 @@ function handle_apply_add_file(){
         return;
     }
 
-    addFile(name, size, "#000000");
-
-
+    addFile(name, size, colorClass);
 }

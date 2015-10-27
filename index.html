@@ -274,9 +274,10 @@
                     <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
                 </div>
                 <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
+                    <input type='text' id="file-color" class="spectrum" />
+                    <!-- <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
                         <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
                     <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
@@ -290,6 +291,11 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.css">
+<link rel="stylesheet" href="assets/styles/spectrum_override.css">
+<script type="text/javascript" src="assets/js/frontend/spectrum.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="assets/js/frontend/language_selector.js"></script>
@@ -307,4 +313,3 @@
 <script src="assets/js/backend/FileSystem.js"></script>
 </body>
 </html>
-

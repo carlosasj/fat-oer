@@ -1,94 +1,136 @@
+.color-red i,
+.mdl-data-table tbody tr:hover.color-red,
 .color-red {
   background-color: #F44336;
   color: white;
 }
 
+.color-pink i,
+.mdl-data-table tbody tr:hover.color-pink,
 .color-pink {
   background-color: #e91e63;
   color: white;
 }
 
+.color-purple i,
+.mdl-data-table tbody tr:hover.color-purple,
 .color-purple {
   background-color: #9c27b0;
   color: white;
 }
 
+.color-deep-purple i,
+.mdl-data-table tbody tr:hover.color-deep-purple,
 .color-deep-purple {
   background-color: #673ab7;
   color: white;
 }
 
+.color-indigo i,
+.mdl-data-table tbody tr:hover.color-indigo,
 .color-indigo {
   background-color: #3f51b5;
   color: white;
 }
 
+.color-blue i,
+.mdl-data-table tbody tr:hover.color-blue,
 .color-blue {
   background-color: #2196F3;
   color: white;
 }
 
+.color-light-blue i,
+.mdl-data-table tbody tr:hover.color-light-blue,
 .color-light-blue {
   background-color: #03a9f4;
   color: black;
 }
 
+.color-cyan i,
+.mdl-data-table tbody tr:hover.color-cyan,
 .color-cyan {
   background-color: #00bcd4;
   color: black;
 }
 
+.color-teal i,
+.mdl-data-table tbody tr:hover.color-teal,
 .color-teal {
   background-color: #009688;
   color: white;
 }
 
+.color-green i,
+.mdl-data-table tbody tr:hover.color-green,
 .color-green {
   background-color: #4CAF50;
   color: black;
 }
 
+.color-light-green i,
+.mdl-data-table tbody tr:hover.color-light-green,
 .color-light-green {
   background-color: #8bc34a;
   color: black;
 }
 
+.color-lime i,
+.mdl-data-table tbody tr:hover.color-lime,
 .color-lime {
   background-color: #cddc39;
   color: black;
 }
 
+.color-yellow i,
+.mdl-data-table tbody tr:hover.color-yellow,
 .color-yellow {
   background-color: #ffeb3b;
   color: black;
 }
 
+.color-amber i,
+.mdl-data-table tbody tr:hover.color-amber,
 .color-amber {
   background-color: #ffc107;
   color: black;
 }
 
+.color-orange i,
+.mdl-data-table tbody tr:hover.color-orange,
 .color-orange {
   background-color: #ff9800;
   color: black;
 }
 
+.color-deep-orange i,
+.mdl-data-table tbody tr:hover.color-deep-orange,
 .color-deep-orange {
   background-color: #ff5722;
   color: white;
 }
 
+.color-brown i,
+.mdl-data-table tbody tr:hover.color-brown,
 .color-brown {
   background-color: #795548;
   color: white;
 }
 
+.color-blue-grey i,
+.mdl-data-table tbody tr:hover.color-blue-grey,
 .color-blue-grey {
   background-color: #607d8b;
   color: white;
 }
 
+.color-grey i,
+.mdl-data-table tbody tr:hover.color-grey,
 .color-grey {
   background-color: #9e9e9e;
   color: black;
+}
+
+.mdl-data-table tbody tr:hover {
+  opacity: .8;
 }

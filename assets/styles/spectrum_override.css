@@ -1,0 +1,15 @@
+.sp-palette .sp-thumb-el {
+  border: 0;
+  height: 2rem;
+  margin: .125rem;
+  width: 2rem;
+}
+
+.sp-container {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: #333;
+}
+
+.sp-picker-container {
+  display: none;
+}
