@@ -1,13 +1,13 @@
 ﻿Introdução
-    De modo geral, o sistema FAT mapeia as partições de disco utilizando dois componentes. O primeiro é o conceito de cluster, o qual se refere ao conjunto de blocos de tamanho multiplo de  512 bytes. O segundo é uma tabela que permanece em memória principal contendo uma entrada para cada bloco de disco existente na partição, cada uma contém um número do próximo bloco ou um indicador de “fim de arquivo”.A partir de uma entrada de diretório, que contém o número do primeiro bloco co arquivo, o sistema operacional indexa este bloco na FAT e lê o local do próximo bloco daquele mesmo arquivo, se houver.
+    De modo geral, o sistema FAT mapeia as partições de disco utilizando dois componentes. O primeiro é o conceito de cluster, o qual se refere ao conjunto de blocos de tamanho multiplo de  512 bytes. O segundo é uma tabela que permanece em memória principal contendo uma entrada para cada bloco de disco existente na partição, cada uma contém um número do próximo bloco ou um indicador de “fim de arquivo”.A partir de uma entrada de diretório, que contém o númerporo do primeiro bloco co arquivo, o sistema operacional indexa este bloco na FAT e lê o local do próximo bloco daquele mesmo arquivo, se houver.
 FAT-12
-   Essa versão de FAT dispõe de 12 bits para mapear cada partição na tabela de alocação. Cada bloco do disco tem por padrão um tamanho de 512 bytes (disquetes). Por tanto, temos no máximo 4096 entradas, de 2 bytes cada, na tabela FAT. Quando o discos foram lançados, a Microsoft permitiu então a adição de blocos com 1 KB, 2KB e 4KB, expandindo o tamanho máximo de uma partição para 16 MB. Como o MS-DOS suporta até 4 partições em um disco, tem-se 64MB como capacidade de disco total.
+   Essa versão de FAT dispõe de 12 bits para mapear cada partição na tabela de alocação. Cada bloco do disco tem por padrão um tamanho de 512 bytes (disquetes). Portanto, temos no máximo 4096 entradas, de 2 bytes cada, na tabela FAT. Quando o discos foram lançados, a Microsoft permitiu então a adição de blocos com 1 KB, 2KB e 4KB, expandindo o tamanho máximo de uma partição para 16 MB. Como o MS-DOS suporta até 4 partições em um disco, tem-se 64MB como capacidade de disco total.
 
 FAT-16
-   Essa versão de FAT dispõe de 16 bits para mapear cada partição na tabela de alocação e foram adicionados o suporte para blocos com 8 KB, 16KB e 32KB de tamanho. O espaço máximo que essa versão suporta é de 2GB (2^16 x 32KB), por tanto um disco de capacidade máxima de 4 partições de 2GB ou 8GB no total.
+   Essa versão de FAT dispõe de 16 bits para mapear cada partição na tabela de alocação e foram adicionados o suporte para blocos com 8 KB, 16KB e 32KB de tamanho. O espaço máximo que essa versão suporta é de 2GB (2^16 * 32KB), portanto um disco de capacidade máxima de 4 partições de 2GB ou 8GB no total.
    
 FAT-32
-   Essa versão de FAT dispõe de 28 bits para mapear cada partição na tabela de alocação. O espaço máximo que essa versão suporta é de 2 TB (2^28 x 32KB) por partições, permitindo um disco de no máximo 8 TB (4 partições de 2 TB cada).
+   Essa versão de FAT dispõe de 28 bits para mapear cada partição na tabela de alocação. O espaço máximo que essa versão suporta é de 2 TB (2^28 * 32KB) por partições, permitindo um disco de no máximo 8 TB (4 partições de 2 TB cada).
 
 
 
