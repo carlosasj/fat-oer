@@ -18,6 +18,33 @@ html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+/* Text Align */
+
+.mdl-data-table th,
+.mdl-data-table td,
+.mdl-data-table td:last-of-type,
+.mdl-data-table th:last-of-type {
+    text-align: left;
+    padding: 5px;
+    height: auto;
+}
+
+.mdl-data-table tbody tr {
+    height: auto;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
 .container {
     max-width: 1280px;
 }
@@ -71,7 +98,9 @@ html, body {
 
 .flipcard .back {
     visibility: hidden;
-    transition: visibility 0s linear .1s, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    display: none;
+    opacity: 0;
+    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
     width: 0;
     height: 0;
     padding: 0;
@@ -80,7 +109,9 @@ html, body {
 
 .flipcard .front {
     visibility: visible;
-    transition: visibility 0s linear .1s, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    display: block;
+    opacity: 1;
+    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
     width: 100%;
     height: auto;
 }
@@ -92,6 +123,8 @@ html, body {
 
 .flipcard.flip-on .back {
     visibility: visible;
+    display: block;
+    opacity: 1;
     width: 100%;
     height: auto;
     padding: 1rem;
@@ -99,6 +132,8 @@ html, body {
 
 .flipcard.flip-on .front {
     visibility: hidden;
+    display: none;
+    opacity: 0;
     width: 0;
     height: 0;
     padding: 0;
@@ -106,8 +141,22 @@ html, body {
 /*----------------*/
 
 .expand-v {
-    background: blue;
     height: 100%;
+    max-height: 200px;
+}
+
+.overflow-table {
+    overflow-y: auto;
+    height: 50vh;
+}
+
+.file-table {
+    float: left;
+}
+
+.file-table .table-header table,
+.file-table .table-body table {
+    width: 100%;
 }
 
 .breakpoints-group {
@@ -133,3 +182,29 @@ html, body {
 .bp-33 { left: calc(33.333% - 65px); }
 .bp-66 { left: calc(66.666% - 130px); }
 .bp-100 { left: calc(100% - 195px); }
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.block-cluster {
+    height: 12px;
+    width: 12px;
+    border: 1px black solid;
+    float: left;
+    opacity: .6;
+}
+
+.fat-entry,
+.file-entry {
+    opacity: .7;
+}
+
+.block-active,
+.block-cluster:hover,
+.fat-active,
+.fat-entry:hover,
+.file-active,
+.file-entry:hover {
+    opacity: 1;
+}
