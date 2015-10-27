@@ -74,6 +74,12 @@
                         </label>
                         EN
                     </li>
+                    <li class="mdl-menu__item">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="sidecardSelector">
+                            <input type="checkbox" id="sidecardSelector" class="mdl-switch__input" checked />
+                        </label>
+                        <span data-i18n="activate-sidecard">Activate Sidecard</span>
+                    </li>
                     <li class="mdl-menu__item" data-i18n="how_to_use">How to Use</li>
                     <li class="mdl-menu__item" data-i18n="authors">Authors</li>
                     <li disabled class="mdl-menu__item" data-i18n="about">About</li>
@@ -92,7 +98,7 @@
         <div class="mdl-grid container">
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="msg_welcome">Not supposed to show</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">This is a title</h2>
                     </div>
@@ -100,7 +106,7 @@
                         this is a sample text, ok?
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
                     <div class="mdl-card__supporting-text front mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -129,20 +135,17 @@
                         <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                             <i class="material-icons">check</i> <span data-i18n="apply-changes">Apply changes</span>
                         </button>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
-                    <div data-i18n="intro_text" class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="mdl-card__supporting-text back">
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
                                     <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
-                                    <thead>
-                                    <tr>
-                                        <th class="align-left" data-i18n="file-list-header">Files:</th>
-                                    </tr>
-                                    </thead>
+                                        <thead>
+                                        <tr>
+                                            <th class="align-left" data-i18n="file-list-header">Files:</th>
+                                        </tr>
+                                        </thead>
                                     </table>
                                 </div>
                                 <div class="overflow-table table-body">
@@ -168,11 +171,11 @@
                             <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
                                     <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
-                                    <thead>
-                                    <tr>
-                                        <th class="align-left" data-i18n="fat-table-header">Fat Table:</th>
-                                    </tr>
-                                    </thead>
+                                        <thead>
+                                        <tr>
+                                            <th class="align-left" data-i18n="fat-table-header">Fat Table:</th>
+                                        </tr>
+                                        </thead>
                                     </table>
                                 </div>
                                 <div class="overflow-table table-body">
@@ -193,11 +196,11 @@
                             <div class="mdl-cell mhl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
                                     <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
-                                    <thead>
-                                    <tr>
-                                        <th class="align-left" data-i18n="disc-blocks-header">Disk blocks:</th>
-                                    </tr>
-                                    </thead>
+                                        <thead>
+                                        <tr>
+                                            <th class="align-left" data-i18n="disc-blocks-header">Disk blocks:</th>
+                                        </tr>
+                                        </thead>
                                     </table>
                                 </div>
                                 <div class="overflow-table">
@@ -217,10 +220,7 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat12">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 12</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
-                    <div data-i18n="fat12_supporting_text" class="mdl-card__supporting-text">
-                        <p>Essa versão de FAT dispõe de 12 bits para mapear cada partição na tabela de alocação. Cada bloco do disco tem por padrão um tamanho de 512 bytes (disquetes). Por tanto, temos no máximo 4096 entradas, de 2 bytes cada, na tabela FAT. Quando o discos foram lançados, a Microsoft permitiu então a adição de blocos com 1 KB, 2KB e 4KB, expandindo o tamanho máximo de uma partição para 16 MB. Como o MS-DOS suporta até 4 partições em um disco, tem-se 64MB como capacidade de disco total.</p>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -233,10 +233,7 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat16">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 16</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
-                    <div data-i18n="fat16_supporting_text" class="mdl-card__supporting-text">
-                        <p>Essa versão de FAT dispõe de 16 bits para mapear cada partição na tabela de alocação e foram adicionados o suporte para blocos com 8 KB, 16KB e 32KB de tamanho. O espaço máximo que essa geração suporta é de 2GB (2^16 x 32KB), por tanto um disco de capacidade máxima de 4 partições de 2GB ou 8GB no total.</p>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -249,12 +246,9 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat32">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 32</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
-                    <div data-i18n="fat32_supporting_text" class="mdl-card__supporting-text">
-                           <p>Essa versão de FAT dispõe de 28 bits para mapear cada partição na tabela de alocação. O espaço máximo que essa geração suporta é de 2 TB (2^28 x 32KB) por partições, permitindo um disco de no máximo 8 TB (4 partições de 2 TB cada).</p>
                     </div>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard">
@@ -265,10 +259,8 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="compare">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="compare">Comparação</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
-                    <div data-i18n="comparation_text" class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
@@ -295,26 +287,29 @@
                     <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
                     <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
                 </div>
-                    <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
-                            <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
-                        </button>
-                    </div>
-                    <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
-                            <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
-                        </button>
-                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
-                            <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
-                        </button>
-                    </div>
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                    <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
+                        <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
+                    </button>
+                </div>
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                    <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
+                        <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
+                    </button>
+                    <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-<script src="assets/js/language_selector.js"></script>
-<script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
+<script src="assets/js/frontend/language_selector.js"></script>
+<script src="assets/js/frontend/flipcard.js"></script>
+<script src="assets/js/frontend/configdisk-frontend.js"></script>
+<script src="assets/js/frontend/activate-sidecard.js"></script>
 </body>
 </html>
+
