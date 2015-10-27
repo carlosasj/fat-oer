@@ -10,7 +10,7 @@ File.prototype.getFileName = function () {
 };
 
 File.prototype.getSize = function () {
-    return this.size;
+    return this.fileSize;
 };
 
 File.prototype.getColor = function () {

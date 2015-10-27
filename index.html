@@ -144,6 +144,8 @@
                                         <thead>
                                         <tr>
                                             <th class="align-left" data-i18n="file-list-header">Files:</th>
+                                            <th class="align-left" data-i18n="InitialBlock">Initial Block</th>
+                                            <th class="align-left" data-i18n="size">Size</th>
                                         </tr>
                                         </thead>
                                     </table>
@@ -195,7 +197,33 @@
                             </div>
                         </div>
                         <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--12-col">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td data-i18n="disk-size"></td>
+                                        <td id="disk-size"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-block-size"></td>
+                                        <td id="disk-block-size"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-used-space"></td>
+                                        <td id="disk-used-space"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-frag"></td>
+                                        <td id="disk-frag"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
                                 <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                                     <i class="material-icons">settings</i>
                                 </button>

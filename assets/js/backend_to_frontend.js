@@ -1,5 +1,9 @@
 var number_regex = /^[1-9]\d*$/;
 var fs = null;
+var disk_size = null;
+var disk_block_size = null;
+var disk_frag = null;
+var disk_used_space = null;
 
 function initialize_fat(numberOfBlocks){
     var fat_container = $('#fat-container')[0];
@@ -23,6 +27,8 @@ function addFile(name, size, color){
     var file = fs.addFile(name, size, color);
     add_file_list_entry(file, color);
     update_fat(file);
+    disk_used_space.text(parseInt(disk_used_space.text()) + parseInt(size));
+    disk_frag.text(parseInt(disk_frag.text()) + parseInt(fs.disk.getBlockSize()*file.getBlocks().length - size));
     //update_disk(file);
 }
 
@@ -30,6 +36,8 @@ function removeFile(fileName){
     var file = fs.removeFile(fileName);
     remove_file_list_entry(fileName);
     update_fat(file);
+    disk_frag.text(parseInt(disk_frag.text()) - parseInt(fs.disk.getBlockSize()*file.getBlocks().length - file.getSize()));
+    disk_used_space.text(parseInt(disk_used_space.text()) - parseInt(file.getSize()));
     //update_disk(file);
 }
 
@@ -81,6 +89,16 @@ function initialize_apply_changes(){
     clear_file_List();
     initialize_disk(numberOfBlocks);
     initialize_fat(numberOfBlocks);
+
+    disk_size = $('#disk-size');
+    disk_block_size = $('#disk-block-size');
+    disk_frag = $('#disk-frag');
+    disk_used_space = $('#disk-used-space');
+
+    disk_size.text(numberOfBlocks*blockSize);
+    disk_block_size.text(blockSize);
+    disk_frag.text(0);
+    disk_used_space.text(0);
 
     flipcard('#config-card');
 
