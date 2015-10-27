@@ -26,27 +26,65 @@ function initialize_disk(numberOfBlocks){
 function addFile(name, size, color){
     var file = fs.addFile(name, size, color);
     add_file_list_entry(file, color);
-    update_fat(file);
+    update_fat(file, 'add');
+    update_disk(file, 'add');
     disk_used_space.text(parseInt(disk_used_space.text()) + parseInt(size));
     disk_frag.text(parseInt(disk_frag.text()) + parseInt(fs.disk.getBlockSize()*file.getBlocks().length - size));
-    //update_disk(file);
+
+    $('[data-file-reference]').hover(
+        function hoverFilesIn() {
+            name = $(this).attr('data-file-reference');
+            $('[data-file-reference="'+name+'"]').addClass("file-entry-active");
+        },
+
+        function hoverFilesOut() {
+            name = $(this).attr('data-file-reference');
+            $('[data-file-reference="'+name+'"]').removeClass("file-entry-active");
+        }
+    );
 }
 
 function removeFile(fileName){
     var file = fs.removeFile(fileName);
     remove_file_list_entry(fileName);
-    update_fat(file);
+    update_fat(file, 'remove');
+    update_disk(file, 'remove');
     disk_frag.text(parseInt(disk_frag.text()) - parseInt(fs.disk.getBlockSize()*file.getBlocks().length - file.getSize()));
     disk_used_space.text(parseInt(disk_used_space.text()) - parseInt(file.getSize()));
-    //update_disk(file);
 }
 
-function update_fat(file){
+function update_fat(file, operation){
     var fat = fs.fat;
+    fileName = file.getFileName();
     file.getBlocks().forEach(function (b) {
         var block = $('#fat-block-id-'+b);
         block[0].innerHTML = fat.entries[b];
-        block.addClass(file.getColor());
+        if (operation == 'add') {
+            block.parent().addClass(file.getColor());
+            block.parent().attr( "data-file-reference", fileName );
+        }
+        else {
+            block.parent().removeClass(file.getColor());
+            block.parent().attr( "data-file-reference", "" );
+            block.parent().hover(null);
+        }
+    })
+}
+
+function update_disk(file, operation){
+    var disk = fs.disk;
+    fileName = file.getFileName();
+    file.getBlocks().forEach(function (b) {
+        var block = $('#block-id-'+b);
+        if (operation == 'add') {
+            block.addClass(file.getColor());
+            block.attr('data-file-reference', fileName);
+        }
+        else {
+            block.removeClass(file.getColor());
+            block.attr('data-file-reference', '');
+            block.hover(null);
+        }
     })
 }
 
@@ -56,9 +94,9 @@ function remove_file_list_entry(fileName){
 
 function add_file_list_entry(file, color){
 
-    var entry = '<tr id="file-list-entry-'+file.getFileName()+'" class="'+color+'"> \
+    var entry = '<tr id="file-list-entry-'+file.getFileName()+'" data-file-reference="' +file.getFileName()+ '" class="'+color+'"> \
         <td class="file-entry"> \
-            <a onclick="removeFile(\''+file.getFileName()+'\');" data-file="' +file.getFileName()+ '" class="remove-file-button" href="#"> \
+            <a onclick="removeFile(\''+file.getFileName()+'\');" class="remove-file-button" href="#"> \
                 <i class="material-icons">close</i></a>'+ file.getFileName()+
         ' </td> \
         <td>' + file.getInitialBlock() + '</td>\

@@ -134,3 +134,25 @@
 .mdl-data-table tbody tr:hover {
   opacity: .8;
 }
+
+.color-red,
+.color-pink,
+.color-purple,
+.color-deep-purple,
+.color-indigo,
+.color-blue,
+.color-light-blue,
+.color-cyan,
+.color-teal,
+.color-green,
+.color-light-green,
+.color-lime,
+.color-yellow,
+.color-amber,
+.color-orange,
+.color-deep-orange,
+.color-brown,
+.color-blue-grey,
+.color-grey {
+  transition: background-color .28s cubic-bezier(.4,0,.2,1), opacity .28s cubic-bezier(.4,0,.2,1);
+}
