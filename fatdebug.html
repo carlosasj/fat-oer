@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>debugging</title>
+    <script src="assets/js/backend/Block.js"></script>
+    <script src="assets/js/backend/Disk.js"></script>
+    <script src="assets/js/backend/FAT.js"></script>
+    <script src="assets/js/backend/File.js"></script>
+    <script src="assets/js/backend/FileList.js"></script>
+    <script src="assets/js/backend/FileAllocator.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<script>
+    var blockSize = 512;
+    var numberOfBlocks = 100;
+    var filesys = new FileSystem(blockSize, numberOfBlocks);
+
+
+    $(document).ready(function(){
+        filesys.addFile("file 1", 600, "#ff0000");
+        filesys.addFile("file 2", 300, "#0ff000");
+        filesys.addFile("file 3", 2000, "#00ff00");
+        filesys.addFile("file 4", 500, "#0000ff");
+//        console.log("working until here, going to remove");
+        filesys.removeFile("file 1");
+        filesys.addFile("file 5", 2000, "#005500");
+
+        document.body.innerHTML += "<p>fat :</p>";
+        filesys.fileList.files.forEach(function (file) {
+            document.body.innerHTML += "<p>" + file.getFileName() + "</p>";
+        });
+        var c = 0;
+
+        document.body.innerHTML += "<p>disk :</p>";
+        filesys.fat.entries.forEach(function (entry) {
+            document.body.innerHTML += "<p>" + c + " | " + entry + "</p>";
+            c++;
+        });
+        c = 0;
+        filesys.disk.blocks.forEach(function (block) {
+            document.body.innerHTML += "<p>" + c + " | " + block.getFile().getFileName() + "</p>";
+            c++;
+        });
+    });
+
+</script>
+
+</body>
+</html>

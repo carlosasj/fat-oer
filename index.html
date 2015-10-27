@@ -29,9 +29,11 @@
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
     <link rel="stylesheet" href="third-party-assets/stylesheets/mdl.css"/>
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/colors.css">
 
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
 </head>
 <body>
 
@@ -90,7 +92,7 @@
         <div class="mdl-grid container">
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="msg_welcome">Not supposed to show</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">This is a title</h2>
                     </div>
@@ -98,20 +100,126 @@
                         this is a sample text, ok?
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
+                    <div class="mdl-card__supporting-text front mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="disk-blocknumber" value=0 />
+                                <label class="mdl-textfield__label" for="disk-blocknumber" data-i18n="blocknumber">Number of blocks</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text" data-i18n="blocksize">Block size</h2>
+                            </div>
+                            <div class="breakpoints-group mdl-cell mdl-cell--12-col">
+                                <div class="breakpoint bp-0">4 KB</div>
+                                <div class="breakpoint bp-33">8 KB</div>
+                                <div class="breakpoint bp-66">16 KB</div>
+                                <div class="breakpoint bp-100">32 KB</div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <input class="mdl-slider mdl-js-slider" id="disk-blocksize" type="range" value="0" min="0" max="3" step="1" data-listvalues="4;8;16;32"/>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <p><span data-i18n="totalsize">Total Size:</span> <span id="display-disksize">0 KB</span></p>
+                        </div>
+                        <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            <i class="material-icons">check</i> <span data-i18n="apply-changes">Apply changes</span>
+                        </button>
+                    </div>
+                    <div class="mdl-card__supporting-text back">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <thead>
+                                    <tr>
+                                        <th class="align-left" data-i18n="file-list-header">Files:</th>
+                                    </tr>
+                                    </thead>
+                                    </table>
+                                </div>
+                                <div class="overflow-table table-body">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                        <tbody>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 1</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 2</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 3</td> </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="align-center">
+                                    <a href="#OpenModal" class="modal-button mdl-js-button  mdl-button--raised color-deep-purple">
+                                        <i class="material-icons">note_add</i><span data-i18n="add-new-file"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <thead>
+                                    <tr>
+                                        <th class="align-left" data-i18n="fat-table-header">Fat Table:</th>
+                                    </tr>
+                                    </thead>
+                                    </table>
+                                </div>
+                                <div class="overflow-table table-body">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                        <tbody>
+                                        <tr> <td class="fat-entry">File 1</td> </tr>
+                                        <tr> <td class="fat-entry">File 2</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        <tr> <td class="fat-entry">File 3</td> </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mhl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <thead>
+                                    <tr>
+                                        <th class="align-left" data-i18n="disc-blocks-header">Disk blocks:</th>
+                                    </tr>
+                                    </thead>
+                                    </table>
+                                </div>
+                                <div class="overflow-table">
+                                    <div class="block-cluster"></div> <div class="block-cluster"></div> <div class="block-cluster"></div> <div class="block-cluster"></div> <div class="block-cluster"></div> <div class="block-cluster"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                    <i class="material-icons">settings</i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat12">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 12</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp">
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -119,12 +227,12 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat16">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 16</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -132,12 +240,12 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="fat32">
                 <h2 class="mdl-cell mdl-cell--12-col">FAT 32</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -145,12 +253,12 @@
             </section>
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="compare">
                 <h2 class="mdl-cell mdl-cell--12-col" data-i18n="compare">Comparação</h2>
-                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard">
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
-                <div class="mdl-cell mdl-cell--9-col mdl-card mdl-shadow--2dp maincard">
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard">
                     <div class="mdl-card__supporting-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
@@ -159,9 +267,43 @@
         </div>
     </main>
 </div>
+<div id="OpenModal" class="modal-dialog modal-dialog-center">
+    <div class="mdl-card mdl-shadow--8dp">
+        <a href="#close"><i class="material-icons">close</i></a>
+        <div class="mdl-grid">
+            <form action="#">
+                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="add-file-name" />
+                    <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
+                </div>
+                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="add-file-size" />
+                    <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
+                    <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
+                </div>
+                    <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
+                            <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
+                        </button>
+                    </div>
+                    <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
+                            <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
+                        </button>
+                        <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                            <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="assets/js/language_selector.js"></script>
 <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
+<script src="assets/js/frontend/language_selector.js"></script>
+<script src="assets/js/frontend/flipcard.js"></script>
+<script src="assets/js/frontend/configdisk-frontend.js"></script>
 </body>
 </html>
