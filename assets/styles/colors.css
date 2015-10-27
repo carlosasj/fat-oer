@@ -1,0 +1,94 @@
+.color-red: {
+  background-color: #F44336;
+  color: white;
+}
+
+.color-pink: {
+  background-color: #e91e63;
+  color: white;
+}
+
+.color-purple: {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.color-deep-purple: {
+  background-color: #673ab7;
+  color: white;
+}
+
+.color-indigo: {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.color-blue: {
+  background-color: #2196F3;
+  color: white;
+}
+
+.color-light-blue: {
+  background-color: #03a9f4;
+  color: black;
+}
+
+.color-cyan: {
+  background-color: #00bcd4;
+  color: black;
+}
+
+.color-teal: {
+  background-color: #009688;
+  color: white;
+}
+
+.color-green: {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.color-light-green: {
+  background-color: #8bc34a;
+  color: black;
+}
+
+.color-lime: {
+  background-color: #cddc39;
+  color: black;
+}
+
+.color-yellow: {
+  background-color: #ffeb3b;
+  color: black;
+}
+
+.color-amber: {
+  background-color: #ffc107;
+  color: black;
+}
+
+.color-orange: {
+  background-color: #ff9800;
+  color: black;
+}
+
+.color-deep-orange: {
+  background-color: #ff5722;
+  color: white;
+}
+
+.color-brown: {
+  background-color: #795548;
+  color: white;
+}
+
+.color-blue-grey: {
+  background-color: #607d8b;
+  color: white;
+}
+
+.color-grey: {
+  background-color: #9e9e9e;
+  color: black;
+}
