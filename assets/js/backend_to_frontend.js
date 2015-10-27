@@ -21,7 +21,7 @@ function initialize_disk(numberOfBlocks){
 
 function addFile(name, size, color){
     var file = fs.addFile(name, size, color);
-    add_file_list_entry(name, color);
+    add_file_list_entry(file, color);
     update_fat(file);
     //update_disk(file);
 }
@@ -36,8 +36,9 @@ function removeFile(fileName){
 function update_fat(file){
     var fat = fs.fat;
     file.getBlocks().forEach(function (b) {
-        var block = $('#fat-block-id-'+b)[0];
-        block.innerHTML = fs.fat.entries[b];
+        var block = $('#fat-block-id-'+b);
+        block[0].innerHTML = fat.entries[b];
+        block.addClass(file.getColor());
     })
 }
 
@@ -45,19 +46,24 @@ function remove_file_list_entry(fileName){
     $('#file-list-entry-'+fileName).remove();
 }
 
-function add_file_list_entry(fileName, color){
+function add_file_list_entry(file, color){
 
-    var entry = '<tr id="file-list-entry-'+fileName+'" class="'+color+'"> \
+    var entry = '<tr id="file-list-entry-'+file.getFileName()+'" class="'+color+'"> \
         <td class="file-entry"> \
-            <a onclick="removeFile(\''+fileName+'\');" data-file="' +fileName+ '" class="remove-file-button" href="#"> \
-                <i class="material-icons">close</i> \
-            </a>'+ fileName +
+            <a onclick="removeFile(\''+file.getFileName()+'\');" data-file="' +file.getFileName()+ '" class="remove-file-button" href="#"> \
+                <i class="material-icons">close</i></a>'+ file.getFileName()+
         ' </td> \
+        <td>' + file.getInitialBlock() + '</td>\
+        <td>' + file.getSize() + '</td>\
     </tr>';
     $('#file-list-container')[0].innerHTML += entry;
 }
 
-//TODO add and remove files from interface!
+//TODO tamanho do arquivo maior que o disco
+
+function clear_file_List() {
+    $('#file-list-container')[0].innerHTML = null;
+}
 
 function initialize_apply_changes(){
     var blockSizeField = $("#disk-blocksize");
@@ -72,6 +78,7 @@ function initialize_apply_changes(){
     }
 
     createFileSystem(blockSize, numberOfBlocks);
+    clear_file_List();
     initialize_disk(numberOfBlocks);
     initialize_fat(numberOfBlocks);
 

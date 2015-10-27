@@ -7,7 +7,7 @@ FileList.prototype.addNewFile = function(file) {
 };
 
 FileList.prototype.removeFile = function(fileIndex) {
-    this.files.slice(fileIndex, fileIndex);
+    this.files.splice(fileIndex, (fileIndex == 0)?1:fileIndex);
 };
 
 FileList.prototype.findFile = function(fileName) {
