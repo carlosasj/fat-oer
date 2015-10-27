@@ -12,6 +12,10 @@ FileAllocator.prototype.addNewFile = function(fileName, size, color) {
     // number of blocks that the file uses
     var nBlocks = Math.ceil(size/this.disk.getBlockSize());
 
+    if (nBlocks > this.disk.getEmptyBlocks()){
+        return 0;
+    }
+
     // find the blocks in which to allocate the file
     var blocks = [];
     //console.log("allocating "+nBlocks+" blocks for file "+fileName);
@@ -31,6 +35,8 @@ FileAllocator.prototype.addNewFile = function(fileName, size, color) {
 
     // add file to disk
     this.disk.addFile(file);
+
+    return 1;
 
 };
 
