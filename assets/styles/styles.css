@@ -307,7 +307,8 @@ a.modal-button {
     width: 12px;
     border: 1px black solid;
     float: left;
-    opacity: .6;
+    opacity: 1;
+    margin: 0 -1px -1px 0;
 }
 
 .fat-entry,
@@ -315,11 +316,6 @@ a.modal-button {
     opacity: .7;
 }
 
-.block-active,
-.block-cluster:hover,
-.fat-active,
-.fat-entry:hover,
-.file-active,
-.file-entry:hover {
-    opacity: 1;
+.file-entry-active {
+    opacity: .7;
 }
