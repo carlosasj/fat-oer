@@ -20,8 +20,17 @@ html, body {
 
 /* Text Align */
 
-.mdl-data-table td {
+.mdl-data-table th,
+.mdl-data-table td,
+.mdl-data-table td:last-of-type,
+.mdl-data-table th:last-of-type {
     text-align: left;
+    padding: 5px;
+    height: auto;
+}
+
+.mdl-data-table tbody tr {
+    height: auto;
 }
 
 .align-right {
@@ -138,6 +147,16 @@ html, body {
 
 .overflow-table {
     overflow-y: auto;
+    height: 50vh;
+}
+
+.file-table {
+    float: left;
+}
+
+.file-table .table-header table,
+.file-table .table-body table {
+    width: 100%;
 }
 
 .breakpoints-group {
@@ -163,3 +182,7 @@ html, body {
 .bp-33 { left: calc(33.333% - 65px); }
 .bp-66 { left: calc(66.666% - 130px); }
 .bp-100 { left: calc(100% - 195px); }
+
+.material-icons {
+    vertical-align: middle;
+}
