@@ -8,8 +8,9 @@ function add_fat_entry(fileName){
 
 function initialize_disk(numberOfBlocks){
     var block = '<div class="block-cluster"></div> ';
+    var disk_container = $('#disk-container')[0];
     for (var i = 0; i < numberOfBlocks; i++) {
-        $('#disk-container')[0].innerHTML += block;
+        disk_container.innerHTML += block;
     }
 }
 
@@ -18,6 +19,11 @@ function addFile(name, size, color){
     add_file_list_entry(name);
     update_fat();
     update_disk();
+}
+
+function update_fat(){
+    var fat = fs.fat;
+    var fatField = $('#')
 }
 
 function add_file_list_entry(fileName){
