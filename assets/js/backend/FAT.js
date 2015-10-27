@@ -1,6 +1,9 @@
 var FAT = function (number_of_blocks) {
 	this.max_blocks = number_of_blocks;
 	this.entries = [];
+	for (var i = 0; i < number_of_blocks; i++){
+		this.entries[i] = -1;
+	}
 };
 
 FAT.prototype.addFile = function(file) {
@@ -13,7 +16,7 @@ FAT.prototype.addFile = function(file) {
 
 FAT.prototype.removeFile = function(file) {
     for (var i = 0; i < file.getBlocks().length; i++){
-        this.entries[file.getBlocks()[i]] = null;
+        this.entries[file.getBlocks()[i]] = -1;
     }
 };
 

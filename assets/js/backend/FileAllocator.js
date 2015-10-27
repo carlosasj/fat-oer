@@ -13,7 +13,7 @@ FileAllocator.prototype.addNewFile = function(fileName, size, color) {
     var nBlocks = Math.ceil(size/this.disk.getBlockSize());
 
     if (nBlocks > this.disk.getEmptyBlocks()){
-        return 0;
+        return null;
     }
 
     // find the blocks in which to allocate the file
@@ -36,7 +36,7 @@ FileAllocator.prototype.addNewFile = function(fileName, size, color) {
     // add file to disk
     this.disk.addFile(file);
 
-    return 1;
+    return file;
 
 };
 
@@ -48,4 +48,6 @@ FileAllocator.prototype.removeFile = function(fileName) {
     this.fileList.removeFile(this.fileList.findFileIndex(fileName));
     this.disk.removeFile(file);
     this.fat.removeFile(file);
+
+    return file;
 };
