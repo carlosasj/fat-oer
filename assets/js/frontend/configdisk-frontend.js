@@ -2,7 +2,8 @@ function get_slider_value(slider) {
     var sli = $(slider);
     var value_raw = sli.val();
     var list_values = sli.data('listvalues').split(';');
-    return parseInt(list_values[value_raw]);
+    var value = parseInt(list_values[value_raw]);
+    return (value==0) ? 0.5 : value;
 }
 
 function calc_disksize(number, size, result, unit) {

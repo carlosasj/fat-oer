@@ -233,12 +233,13 @@ html, body {
 }
 
 .bp-0 { left: calc(0%); }
-.bp-25 { left: calc(25% - 50px); }
+.bp-25 { left: calc(25% - 62.5px); }
 .bp-33 { left: calc(33.333% - 67px); }
-.bp-50 { left: calc(50% - 100.5px); }
+.bp-50 { left: calc(50% - 125px); }
 .bp-66 { left: calc(66.666% - 134px); }
-.bp-75 { left: calc(75% - 150.5px); }
+.bp-75 { left: calc(75% - 188px); }
 .bp-100 { left: calc(100% - 201px); }
+.bp-100-5 { left: calc(100% - 252px); }
 
 .material-icons {
     vertical-align: middle;

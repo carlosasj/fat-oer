@@ -97,12 +97,12 @@
     <main class="mdl-layout__content mdl-color--grey-100" data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
         <div class="mdl-grid container">
             <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
-                <h2 class="mdl-cell mdl-cell--12-col">FAT 32</h2>
+                <h2 class="mdl-cell mdl-cell--12-col">FAT 16</h2>
                 <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text" data-i18n="brief-description">Brief description</h2>
                     </div>
-                    <div class="mdl-card__supporting-text" data-i18n="fat32_supporting_text">
+                    <div class="mdl-card__supporting-text" data-i18n="fat16_supporting_text">
                         this is a sample text, ok?
                     </div>
                 </div>
@@ -120,13 +120,14 @@
                                 <h2 class="mdl-card__title-text" data-i18n="blocksize">Block size</h2>
                             </div>
                             <div class="breakpoints-group mdl-cell mdl-cell--12-col">
-                                <div class="breakpoint bp-0" onclick="updateSlider('#disk-blocksize', 0)"><span>4 KB</span></div>
-                                <div class="breakpoint bp-33" onclick="updateSlider('#disk-blocksize', 1)"><span>8 KB</span></div>
-                                <div class="breakpoint bp-66" onclick="updateSlider('#disk-blocksize', 2)"><span>16 KB</span></div>
-                                <div class="breakpoint bp-100" onclick="updateSlider('#disk-blocksize', 3)"><span>32 KB</span></div>
+                                <div class="breakpoint bp-0" onclick="updateSlider('#disk-blocksize', 0)"><span>2 KB</span></div>
+                                <div class="breakpoint bp-25" onclick="updateSlider('#disk-blocksize', 1)"><span>4 KB</span></div>
+                                <div class="breakpoint bp-50" onclick="updateSlider('#disk-blocksize', 2)"><span>8 KB</span></div>
+                                <div class="breakpoint bp-75" onclick="updateSlider('#disk-blocksize', 3)"><span>16 KB</span></div>
+                                <div class="breakpoint bp-100-5" onclick="updateSlider('#disk-blocksize', 4)"><span>32 KB</span></div>
                             </div>
                             <div class="mdl-cell mdl-cell--12-col">
-                                <input class="mdl-slider mdl-js-slider" id="disk-blocksize" type="range" value="0" min="0" max="3" step="1" data-listvalues="4;8;16;32"/>
+                                <input class="mdl-slider mdl-js-slider" id="disk-blocksize" type="range" value="0" min="0" max="4" step="1" data-listvalues="2;4;8;16;32"/>
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--12-col">
