@@ -1,9 +1,9 @@
 [PT-BR]
 Após algumas simulações deste REA e com o auxílio da tabela, percebe-se duas coias:
 1. A evolução do sistema FAT acompanhou a escalabilidade dos dispositivos de armazenamento.
-2. Atualmente, pela alta capacidade de armazenamento, o FAT não é utilizado devido ao elevado custo de memória RAM. Com execeção de dispositivos de baixa capacidade de armazenamento, tais como pendrives e dispositivos móveis.
+2. Atualmente, pela alta capacidade de armazenamento, o FAT não é frequentemente utilizado devido ao elevado custo de memória RAM. Com execeção de dispositivos de baixa capacidade de armazenamento, tais como pendrives e dispositivos móveis.
 
 [EN-US]
 After some simulations using this OER and with the table, two things are noticeable:
 1. The evolution of the FAT System kept up with the storage devices's scalability.
-2. Nowadays we have high storage capacities and FAT isn't used because of the high usage of RAM. However, there's exceptions like pendrives and mobile devices, that have low storage capacities.
+2. Nowadays we have high storage capacities and FAT isn't often used because of the high RAM usage. However, there are exceptions like pendrives and mobile devices, that have low storage capacities.
