@@ -382,3 +382,9 @@ button.modal-button {
 .disk-size-invalid {
     background: red;
 }
+
+.compare-table.mdl-data-table th,
+.compare-table.mdl-data-table td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

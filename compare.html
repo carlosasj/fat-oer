@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="Um Recurso Educacional para aprender a história e as características do sistema FAT.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REA - FAT</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="third-party-assets/stylesheets/mdl.css"/>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/colors.css">
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
+</head>
+<body>
+
+<button id="nav-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-layout--large-screen-hide">
+    <i class="material-icons">add</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
+    <a href="/"><li class="mdl-menu__item">Home</li></a>
+    <a href="fat12.html"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="fat16.html"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="fat32.html"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="compare.html"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
+</ul>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title" data-i18n="fat_file_system">FAT File System</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="/" data-i18n="home">Home | How to use</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="compare.html" data-i18n="compare">Compare</a>
+
+                <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">settings</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="more-options">
+                    <li class="mdl-menu__item">
+                        PT
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="languageSelector">
+                            <input type="checkbox" id="languageSelector" class="mdl-switch__input" checked />
+                        </label>
+                        EN
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/" data-i18n="home">Home | How to use</a>
+            <a class="mdl-navigation__link" href="authors.html" data-i18n="authors">Authors</a>
+            <a class="mdl-navigation__link" href="about.html" data-i18n="about">About</a>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid container">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
+                <h2 class="mdl-cell mdl-cell--12-col" data-i18n="compare">Compare</h2>
+                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp mdl-grid">
+                    <div class="mdl-card__supporting-text mdl-grid">
+                        <table class="mdl-data-table compare-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="blocksize">Block Size</th>
+                                    <th>FAT 12</th>
+                                    <th>FAT 16</th>
+                                    <th>FAT 32</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.5 KB</td>
+                                    <td>2 MB</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 KB</td>
+                                    <td>4 MB</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2 KB</td>
+                                    <td>8 MB</td>
+                                    <td>128 MB</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4 KB</td>
+                                    <td>16 MB</td>
+                                    <td>256 MB</td>
+                                    <td>1 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>8 KB</td>
+                                    <td></td>
+                                    <td>512 MB</td>
+                                    <td>2 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>16 KB</td>
+                                    <td></td>
+                                    <td>1024 MB</td>
+                                    <td>2 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>32 KB</td>
+                                    <td></td>
+                                    <td>2048 MB</td>
+                                    <td>2 TB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="assets/js/frontend/language_selector.js"></script>
+</body>
+</html>
