@@ -289,33 +289,30 @@
 </div>
 <div id="OpenModal" class="modal-dialog modal-dialog-center">
     <div class="mdl-card mdl-shadow--8dp">
-
         <div class="mdl-grid">
-            <form action="#">
-                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="add-file-name" />
-                    <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
-                </div>
-                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="^[1-9](?:[0-9]?)+$" id="add-file-size" value="512" />
-                    <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
-                    <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
-                </div>
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <input type='text' id="file-color" class="spectrum" />
-                    <!-- <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
-                        <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
-                    </button> -->
-                </div>
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
-                        <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
-                    </a>
-                    <button onclick="handle_apply_add_file()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
-                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
-                    </button>
-                </div>
-            </form>
+            <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="add-file-name" />
+                <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
+            </div>
+            <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="^[1-9](?:[0-9]?)+$" id="add-file-size" value="512" />
+                <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
+                <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
+            </div>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                <input type='text' id="file-color" class="spectrum" />
+                <!-- <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
+                    <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
+                </button> -->
+            </div>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
+                    <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
+                </a>
+                <button onclick="handle_apply_add_file()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                    <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                </button>
+            </div>
         </div>
         <a href="#close" class="close"><i class="material-icons">close</i></a>
     </div>

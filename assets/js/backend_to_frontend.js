@@ -176,4 +176,6 @@ function handle_apply_add_file(){
     }
 
     addFile(name, size, colorClass);
+
+    location.hash = 'close';
 }
