@@ -105,6 +105,38 @@
                     <div class="mdl-card__supporting-text" data-i18n="fat16_supporting_text">
                         this is a sample text, ok?
                     </div>
+                    <div class="mdl-card__supporting-text">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-i18n="blocksize">Block Size</th>
+                                    <th data-i18n="max-disk-sixe">Max Disk Size</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-center">
+                                <tr>
+                                    <td>2 KB</td>
+                                    <td>128 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>4 KB</td>
+                                    <td>256 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>8 KB</td>
+                                    <td>512 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>16 KB</td>
+                                    <td>1024 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>32 KB</td>
+                                    <td>2048 MB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
                     <div class="mdl-card__supporting-text front mdl-grid">
@@ -131,7 +163,7 @@
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--12-col">
-                            <p><span data-i18n="totalsize">Total Size:</span> <span id="display-disksize">0 KB</span></p>
+                            <p><span data-i18n="totalsize">Total Size:</span> <span id="display-disksize" data-fattype="16">0 KB</span></p>
                         </div>
                         <button onclick="initialize_apply_changes()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                             <i class="material-icons">check</i> <span data-i18n="apply-changes">Apply changes</span>

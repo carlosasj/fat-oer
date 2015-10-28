@@ -378,3 +378,7 @@ button.modal-button {
 .bg-roberto {
     background: url('../img/roberto.jpg') center / cover;
 }
+
+.disk-size-invalid {
+    background: red;
+}

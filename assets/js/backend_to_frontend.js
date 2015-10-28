@@ -123,6 +123,12 @@ function initialize_apply_changes(){
         return;
     }
 
+    if ($('#display-disksize').hasClass('disk-size-invalid')){
+        alert($.i18n.prop('disk-size-invalid'));
+        return;
+    }
+
+
     createFileSystem(blockSize, numberOfBlocks);
     clear_file_List();
     initialize_disk(numberOfBlocks);
