@@ -50,9 +50,11 @@ html, body {
 
 .container {
     max-width: 1280px;
+    -webkit-perspective: 500px;
+    perspective: 2000px;
 }
 .sidecard, .maincard{
-    min-height: 80vh;
+    min-height: calc(100vh - 160px)
 }
 
 .sidecard {
@@ -146,7 +148,7 @@ html, body {
     visibility: hidden;
     display: none;
     opacity: 0;
-    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    transition: visibility .2s linear .2s, display .2s linear .2s, opacity .4s linear, height .2s linear .2s, width .2s linear .2s, padding .2s linear .2s;
     width: 0;
     height: 0;
     padding: 0;
@@ -157,7 +159,7 @@ html, body {
     visibility: visible;
     display: block;
     opacity: 1;
-    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    transition: visibility .2s linear .2s, display .2s linear .2s, opacity .4s linear, height .2s linear .2s, width .2s linear .2s, padding .2s linear .2s;
     width: 100%;
     height: auto;
 }
@@ -231,12 +233,13 @@ html, body {
 }
 
 .bp-0 { left: calc(0%); }
-.bp-25 { left: calc(25% - 50px); }
+.bp-25 { left: calc(25% - 62.5px); }
 .bp-33 { left: calc(33.333% - 67px); }
-.bp-50 { left: calc(50% - 100.5px); }
+.bp-50 { left: calc(50% - 125px); }
 .bp-66 { left: calc(66.666% - 134px); }
-.bp-75 { left: calc(75% - 150.5px); }
+.bp-75 { left: calc(75% - 188px); }
 .bp-100 { left: calc(100% - 201px); }
+.bp-100-5 { left: calc(100% - 252px); }
 
 .material-icons {
     vertical-align: middle;
@@ -254,6 +257,10 @@ button.modal-button {
 
 .mdl-button.mdl-button--icon .material-icons {
     transform: translate(-12px, -12px);
+}
+
+.mdl-layout__drawer-button .material-icons {
+    vertical-align: baseline;
 }
 
 .config-button {
@@ -322,4 +329,62 @@ button.modal-button {
 
 .file-entry-active {
     opacity: .7;
+}
+
+.mdl-slider__background-flex div {
+    transition: flex .5s;
+}
+
+.author {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.github-icon {
+    max-width: 25px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.author-card.mdl-card {
+  height: 256px;
+  max-width: 100%;
+}
+.author-card > .mdl-card__actions {
+  /*height: 52px;*/
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.author-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.bg-carlos {
+    background: url('../img/carlos.jpg') center / cover;
+}
+
+.bg-frederico {
+    background: url('../img/frederico.jpg') center / cover;
+}
+
+.bg-lucas {
+    background: url('../img/lucas.jpg') center / cover;
+}
+
+.bg-roberto {
+    background: url('../img/roberto.jpg') center / cover;
+}
+
+.disk-size-invalid {
+    background: red;
+}
+
+.compare-table.mdl-data-table th,
+.compare-table.mdl-data-table td {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

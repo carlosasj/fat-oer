@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="Um Recurso Educacional para aprender a história e as características do sistema FAT.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REA - FAT</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">-->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="third-party-assets/stylesheets/mdl.css"/>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/colors.css">
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="third-party-assets/jquery-i18n-properties/jquery.i18n.properties.js"></script>
+</head>
+<body>
+
+<button id="nav-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-layout--large-screen-hide">
+    <i class="material-icons">add</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
+    <a href="/"><li class="mdl-menu__item" data-i18n="home">Home | How to use</li></a>
+    <a href="fat12.html"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="fat16.html"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="fat32.html"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="compare.html"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
+</ul>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title" data-i18n="fat_file_system">FAT File System</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="/" data-i18n="home">Home | How to use</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="compare.html" data-i18n="compare">Compare</a>
+
+                <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">settings</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="more-options">
+                    <li class="mdl-menu__item">
+                        PT
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="languageSelector">
+                            <input type="checkbox" id="languageSelector" class="mdl-switch__input" checked />
+                        </label>
+                        EN
+                    </li>
+                    <li class="mdl-menu__item">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="sidecardSelector">
+                            <input type="checkbox" id="sidecardSelector" class="mdl-switch__input" checked />
+                        </label>
+                        <span data-i18n="activate-sidecard">Activate Sidecard</span>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/" data-i18n="home">Home | How to use</a>
+            <a class="mdl-navigation__link" href="authors.html" data-i18n="authors">Authors</a>
+            <a class="mdl-navigation__link" href="about.html" data-i18n="about">About</a>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content mdl-color--grey-100" data-spy="scroll" data-target=".mdl-navigation" data-offset="50">
+        <div class="mdl-grid container">
+            <section class="mdl-cell mdl-cell--12-col mdl-grid" id="welcome">
+                <h2 class="mdl-cell mdl-cell--12-col">FAT 16</h2>
+                <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp sidecard show-sidecard mdl-grid mdl-cell--hide-tablet mdl-cell--hide-phone">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" data-i18n="brief-description">Brief description</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text" data-i18n="fat16_supporting_text">
+                        this is a sample text, ok?
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-i18n="blocksize">Block Size</th>
+                                    <th data-i18n="max-disk-sixe">Max Disk Size</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-center">
+                                <tr>
+                                    <td>2 KB</td>
+                                    <td>128 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>4 KB</td>
+                                    <td>256 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>8 KB</td>
+                                    <td>512 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>16 KB</td>
+                                    <td>1024 MB</td>
+                                </tr>
+                                <tr>
+                                    <td>32 KB</td>
+                                    <td>2048 MB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--2dp maincard flipcard mdl-grid" id="config-card">
+                    <div class="mdl-card__supporting-text front mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="[1-9]\d*" id="disk-blocknumber" value="0" />
+                                <label class="mdl-textfield__label" for="disk-blocknumber" data-i18n="blocknumber">Number of blocks</label>
+                                <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is an invalid number!</span>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-grid">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text" data-i18n="blocksize">Block size</h2>
+                            </div>
+                            <div class="breakpoints-group mdl-cell mdl-cell--12-col">
+                                <div class="breakpoint bp-0" onclick="updateSlider('#disk-blocksize', 0)"><span>2 KB</span></div>
+                                <div class="breakpoint bp-25" onclick="updateSlider('#disk-blocksize', 1)"><span>4 KB</span></div>
+                                <div class="breakpoint bp-50" onclick="updateSlider('#disk-blocksize', 2)"><span>8 KB</span></div>
+                                <div class="breakpoint bp-75" onclick="updateSlider('#disk-blocksize', 3)"><span>16 KB</span></div>
+                                <div class="breakpoint bp-100-5" onclick="updateSlider('#disk-blocksize', 4)"><span>32 KB</span></div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <input class="mdl-slider mdl-js-slider" id="disk-blocksize" type="range" value="0" min="0" max="4" step="1" data-listvalues="2;4;8;16;32"/>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <p><span data-i18n="totalsize">Total Size:</span> <span id="display-disksize" data-fattype="16">0 KB</span></p>
+                        </div>
+                        <button onclick="initialize_apply_changes()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            <i class="material-icons">check</i> <span data-i18n="apply-changes">Apply changes</span>
+                        </button>
+                        <div><span data-i18n="may_take_a_while">This may take a while for large number of blocks.</span></div>
+                    </div>
+                    <div class="mdl-card__supporting-text back">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                        <thead>
+                                        <tr>
+                                            <th class="align-left" data-i18n="file-list-header">Files:</th>
+                                            <th class="align-left" data-i18n="InitialBlock">Initial Block</th>
+                                            <th class="align-left" data-i18n="size">Size</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="overflow-table table-body">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                        <tbody id="file-list-container">
+                                        <!-- example file entry <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 1</td> </tr>-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="align-center">
+                                    <a href="#OpenModal" class="modal-button mdl-js-button  mdl-button--raised color-deep-purple">
+                                        <i class="material-icons">note_add</i><span data-i18n="add-new-file"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                        <thead>
+                                        <tr>
+                                            <th data-i18n="fat-table-header-index">FAT Index</th>
+                                            <th data-i18n="fat-table-header-next">Next block</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="overflow-table table-body">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                        <tbody id="fat-container">
+                                        <!-- example file entry: <tr> <td class="fat-entry">File 1</td> </tr>-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mhl-cell--4-col file-table mdl-shadow--2dp">
+                                <div class="table-header">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                        <thead>
+                                        <tr>
+                                            <th class="align-left" data-i18n="disc-blocks-header">Disk blocks:</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div id="disk-container" class="overflow-table">
+                                    <!-- example disk entry: <div class="block-cluster"></div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td data-i18n="disk-size"></td>
+                                        <td id="disk-size"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-block-size"></td>
+                                        <td id="disk-block-size"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-used-space"></td>
+                                        <td id="disk-used-space"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-i18n="disk-frag"></td>
+                                        <td id="disk-frag"></td>
+                                        <td>KB</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored config-button">
+                                    <i class="material-icons">settings</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<div id="OpenModal" class="modal-dialog modal-dialog-center">
+    <div class="mdl-card mdl-shadow--8dp">
+
+        <div class="mdl-grid">
+            <form action="#">
+                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="add-file-name" />
+                    <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
+                </div>
+                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="^[1-9](?:[0-9]?)+$" id="add-file-size" value="512" />
+                    <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
+                    <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
+                </div>
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                    <input type='text' id="file-color" class="spectrum" />
+                    <!-- <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
+                        <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
+                    </button> -->
+                </div>
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                    <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
+                        <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
+                    </a>
+                    <button onclick="handle_apply_add_file()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <a href="#close" class="close"><i class="material-icons">close</i></a>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.css">
+<link rel="stylesheet" href="assets/styles/spectrum_override.css">
+<script type="text/javascript" src="assets/js/frontend/spectrum.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="assets/js/frontend/language_selector.js"></script>
+<script src="assets/js/frontend/flipcard.js"></script>
+<script src="assets/js/frontend/configdisk-frontend.js"></script>
+<script src="assets/js/backend_to_frontend.js"></script>
+<script src="assets/js/frontend/activate-sidecard.js"></script>
+
+<script src="assets/js/backend/Block.js"></script>
+<script src="assets/js/backend/Disk.js"></script>
+<script src="assets/js/backend/FAT.js"></script>
+<script src="assets/js/backend/File.js"></script>
+<script src="assets/js/backend/FileAllocator.js"></script>
+<script src="assets/js/backend/FileList.js"></script>
+<script src="assets/js/backend/FileSystem.js"></script>
+<script src="assets/js/frontend/activate-sidecard.js"></script>
+<script src="assets/js/frontend/multiple-hover-files.js"></script>
+</body>
+</html>
