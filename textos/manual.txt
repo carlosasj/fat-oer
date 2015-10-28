@@ -1,9 +1,19 @@
-No menu ao topo da página, encontram-se botões âncora (A) que levam tanto às descrições das características dos tipo de FAT quanto às comparações. Também são encontradas as opções de troca de linguagem (B), como usar e autores do REA (C).
+[PT-BR]
 
-Para cada tipo de FAT, há um breve texto com suas principais características.
-No início da página, para realizar uma simulação, deve-se inserir o número de blocos e o tamanho de cada bloco desejados. Após estas escolhas, deve-se “Aplicar alterações”. Assim, o cartão rotacionará, mostrando a representação da Tabela de Arquivos (1), a FAT (2) e dos blocos no disco (3).
-A partir disso, deve-se inserir a quantidade de arquivos desejados, com seus respectivos tamanhos e nomes. Esses serão dispostos de acordo com as inserções e remoções realizadas.
+No menu ao topo da pÃ¡gina, encontram-se botÃµes Ã¢ncora (A) que levam tanto Ã s descriÃ§Ãµes das caracterÃ­sticas dos tipos de FAT quanto Ã s comparaÃ§Ãµes. TambÃ©m sÃ£o encontradas as opÃ§Ãµes de troca de linguagem (B), â€œComo Usarâ€ (C) e â€œAutoresâ€ do REA (D).
 
-Conforme as inserções e/ou remoções de arquivos realizadas, percebe-se a atualização simultânea em todos os componentes (1, 2 e 3). Para melhor visualização, com a disposição do mouse sobre qualquer elemento dos três componentes, serão destacados simultâneamente os blocos ocupados no disco, a localização na FAT e o arquivo na tabela de arquivos.
+Para cada tipo de FAT, hÃ¡ um breve texto com suas principais caracterÃ­sticas.
+No inÃ­cio da pÃ¡gina, para realizar uma simulaÃ§Ã£o, deve-se inserir o nÃºmero de blocos e o tamanho de cada bloco desejados. ApÃ³s estas escolhas, deve-se â€œAplicar AlteraÃ§Ãµesâ€. Assim, o cartÃ£o rotacionarÃ¡, mostrando a representaÃ§Ã£o da Tabela de Arquivos (1), a FAT (2) e dos blocos no disco (3).
+A partir disso, deve-se inserir a quantidade de arquivos desejados, com seus respectivos tamanhos e nomes. Esses serÃ£o dispostos de acordo com as inserÃ§Ãµes e remoÃ§Ãµes realizadas.
+
+Conforme as inserÃ§Ãµes e/ou remoÃ§Ãµes de arquivos realizadas, percebe-se a atualizaÃ§Ã£o simultÃ¢nea em todos os componentes (1, 2 e 3). Para melhor visualizaÃ§Ã£o, com a disposiÃ§Ã£o do mouse sobre qualquer elemento dos trÃªs componentes, serÃ£o destacados simultÃ¢neamente os blocos ocupados no disco, a localizaÃ§Ã£o na FAT e o arquivo na tabela de arquivos.
  
+[EN-US]
 
+At the top of the website, we find anchor buttons (A) which takes us to the types of FAT's descriptions and characteristics and comparisons as well. We can also find options for language changing (B), â€œHow to Useâ€ and display the OER'sâ€œAuthorsâ€ (D).
+
+For each kind of FAT, there is a short text with its main characteristics.
+In the beggining of the website, to begin a simmulation, you should insert the number of blocks and its size (of each one). After these choices, â€œApply Changesâ€. Then, the card will rotate, showing the representation of the File Table (1), FAT (2) and the disk's blocks (3).
+The last thing you should do is insert the amount of files as you want, each one with its size and name. These will be organized according to the insertions or remotions made.
+
+According as the insertions and/or remotions are made, the components (1, 2 and 3) simultaneous updates are notable. For a better visualization, the elements of all the components are highlighted as the user puts the mouse over one of them.
