@@ -52,7 +52,7 @@ html, body {
     max-width: 1280px;
 }
 .sidecard, .maincard{
-    min-height: 80vh;
+    min-height: calc(100vh - 160px)
 }
 
 .sidecard {
@@ -256,6 +256,10 @@ button.modal-button {
     transform: translate(-12px, -12px);
 }
 
+.mdl-layout__drawer-button .material-icons {
+    vertical-align: baseline;
+}
+
 .config-button {
     bottom: 0;
     right: 0;
@@ -322,4 +326,52 @@ button.modal-button {
 
 .file-entry-active {
     opacity: .7;
+}
+
+.mdl-slider__background-flex div {
+    transition: flex .5s;
+}
+
+.author {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.github-icon {
+    max-width: 25px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.author-card.mdl-card {
+  height: 256px;
+  max-width: 100%;
+}
+.author-card > .mdl-card__actions {
+  /*height: 52px;*/
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.author-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.bg-carlos {
+    background: url('../img/carlos.jpg') center / cover;
+}
+
+.bg-frederico {
+    background: url('../img/frederico.jpg') center / cover;
+}
+
+.bg-lucas {
+    background: url('../img/lucas.jpg') center / cover;
+}
+
+.bg-roberto {
+    background: url('../img/roberto.jpg') center / cover;
 }
