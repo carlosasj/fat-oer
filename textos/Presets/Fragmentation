@@ -1,0 +1,69 @@
+insert{
+	fileName: file1
+	color: blue
+	fileSize: 4 
+}
+
+insert{
+	fileName: file2
+	color: red
+	fileSize: 2 
+}
+
+insert{
+	fileName: file3
+	color: blue
+	fileSize: 7 
+}
+
+insert{
+	fileName: file5
+	color: red
+	fileSize: 4 
+}
+
+insert{
+	fileName: file6
+	color: blue
+	fileSize: 9 
+}
+
+insert{
+	fileName: file7
+	color: red
+	fileSize: 1 
+}
+
+insert{
+	fileName: file9
+	color: blue
+	fileSize: 6 
+}
+
+insert{
+	fileName: file10
+	color: red
+	fileSize: 3 
+}
+
+insert{
+	fileName: file11
+	color: blue
+	fileSize: 3 
+}
+
+remove{
+	fileName: file2
+}
+
+remove{
+	fileName: file5
+}
+
+remove{
+	fileName: file7
+} 
+
+remove{
+	fileNema: file10
+}

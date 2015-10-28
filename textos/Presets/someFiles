@@ -1,0 +1,39 @@
+insert{
+	fileName: file1
+	color: blue
+	fileSize: 6
+}
+
+insert{
+	fileName: filer2
+	color: blue-grey
+	fileSize: 2
+}
+
+
+insert{
+	fileName: file3
+	color: deep-purple
+	fileSize: 4 
+}
+
+
+remove{
+	fileName: file1
+	color: yellow
+	fileSize: 4 
+}
+
+insert{
+	fileName: file4
+	color: ambar
+	fileSize: 4 
+}
+
+insert{
+	fileName: file5
+	color: red
+	fileSize: 5
+}
+
+
