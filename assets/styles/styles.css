@@ -50,6 +50,8 @@ html, body {
 
 .container {
     max-width: 1280px;
+    -webkit-perspective: 500px;
+    perspective: 2000px;
 }
 .sidecard, .maincard{
     min-height: calc(100vh - 160px)
@@ -146,7 +148,7 @@ html, body {
     visibility: hidden;
     display: none;
     opacity: 0;
-    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    transition: visibility .2s linear .2s, display .2s linear .2s, opacity .4s linear, height .2s linear .2s, width .2s linear .2s, padding .2s linear .2s;
     width: 0;
     height: 0;
     padding: 0;
@@ -157,7 +159,7 @@ html, body {
     visibility: visible;
     display: block;
     opacity: 1;
-    transition: visibility 0s linear .1s, display 0s linear .1s, opacity .1s linear, height 0s linear .1s, width 0s linear .1s, padding 0s linear .1s;
+    transition: visibility .2s linear .2s, display .2s linear .2s, opacity .4s linear, height .2s linear .2s, width .2s linear .2s, padding .2s linear .2s;
     width: 100%;
     height: auto;
 }

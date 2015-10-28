@@ -37,17 +37,52 @@
 </head>
 <body>
 
+<button id="nav-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-layout--large-screen-hide">
+    <i class="material-icons">add</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
+    <a href="/"><li class="mdl-menu__item">Home</li></a>
+    <a href="fat12.html"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="fat16.html"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="fat32.html"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="compare.html"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
+</ul>
+
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title" data-i18n="fat_file_system">FAT File System</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="/" data-i18n="home">Home | How to use</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="compare.html" data-i18n="compare">Compare</a>
+
+                <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">settings</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="more-options">
+                    <li class="mdl-menu__item">
+                        PT
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="languageSelector">
+                            <input type="checkbox" id="languageSelector" class="mdl-switch__input" checked />
+                        </label>
+                        EN
+                    </li>
+                </ul>
+
+            </nav>
         </div>
     </header>
     <div class="mdl-layout__drawer">
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="/" data-i18n="home">Home</a>
-            <a class="mdl-navigation__link" href="howtouse.html" data-i18n="how_to_use">How to Use</a>
+            <a class="mdl-navigation__link" href="/" data-i18n="home">Home | How to use</a>
             <a class="mdl-navigation__link" href="authors.html" data-i18n="authors">Authors</a>
             <a class="mdl-navigation__link" href="about.html" data-i18n="about">About</a>
         </nav>

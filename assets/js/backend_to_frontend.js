@@ -140,6 +140,7 @@ function initialize_apply_changes(){
 
     flipcard('#config-card');
 
+
 }
 
 function createFileSystem(blockSize, numberOfBlocks) {
