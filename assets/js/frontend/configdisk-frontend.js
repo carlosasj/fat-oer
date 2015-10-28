@@ -20,6 +20,12 @@ function calc_disksize(number, size, result, unit) {
 
 }
 
+function updateSlider(slider, value) {
+    slider = $(slider);
+    slider[0].MaterialSlider.change(value);
+    slider.trigger("change");
+}
+
 
 $(document).ready(function() {
     calc_disksize("#disk-blocknumber", "#disk-blocksize", "#display-disksize", " KB");
