@@ -1,0 +1,4 @@
+Após as simulações deste REA e com o auxílio da tabela, percebe-se duas coias:
+1. A evolução do sistema FAT acompanhou a escalabilidade dos dispositivos de armazenamento.
+2. Atualmente, devidado a alta capacidade de armazenamento, o FAT não é utilizado devido ao elevado custo de memória RAM. Com execeção de dispositivos de baixa capacidade de armazenamento, tais como pen-drives e dispositivos móveis.
+
