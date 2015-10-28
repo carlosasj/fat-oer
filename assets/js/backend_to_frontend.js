@@ -170,5 +170,10 @@ function handle_apply_add_file(){
         return;
     }
 
+    if (parseInt(size) > (parseInt(disk_size.text()) - parseInt(disk_used_space.text()))) {
+        alert($.i18n.prop('file-size-greater-available-space'));
+        return;
+    }
+
     addFile(name, size, colorClass);
 }

@@ -20,6 +20,9 @@ html, body {
 
 /* Text Align */
 
+.mdl-data-table tbody tr {
+    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
 .mdl-data-table th,
 .mdl-data-table td,
 .mdl-data-table td:last-of-type,
