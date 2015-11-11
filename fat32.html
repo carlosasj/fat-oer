@@ -253,10 +253,13 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="mdl-cell mdl-cell--6-col">
-                                <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored config-button">
+                            <div class="mdl-cell mdl-cell--6-col config-button">
+                                <button onclick="flipcard('#config-card')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                                     <i class="material-icons">settings</i>
                                 </button>
+                                <a href="#codeprogram" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                    <i class="material-icons">code</i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -264,6 +267,25 @@
             </section>
         </div>
     </main>
+</div>
+<div id="codeprogram" class="modal-dialog modal-dialog-center">
+    <div class="mdl-card mdl-shadow--8dp">
+
+        <div class="mdl-grid">
+            <form action="#">
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows= "10" id="codearea"></textarea>
+                    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+                </div>
+                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                    <button onclick="handle_run_script_code()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <a href="#close" class="close"><i class="material-icons">close</i></a>
+    </div>
 </div>
 <div id="OpenModal" class="modal-dialog modal-dialog-center">
     <div class="mdl-card mdl-shadow--8dp">

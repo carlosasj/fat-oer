@@ -186,3 +186,48 @@ function handle_apply_add_file(){
 
     location.hash = 'close';
 }
+
+function handle_run_script_code() {
+    var automatic_file_number = 0;
+    var automatic_file_color = 0;
+    var palette = [
+        '#f44336','#3f51b5','#e91e63','#ff9800','#9c27b0','#2196f3',
+        '#8bc34a','#03a9f4','#ffc107','#4caf50','#607d8b','#cddc39',
+        '#673ab7','#ffeb3b','#00bcd4','#ff5722','#795548','#009688',
+    ];
+    var error_messages = 'Error:\n';
+    var code = $('#codearea').val().split('\n');
+    for (line in code){
+        var splitted = code[line].split(';');
+
+        try {
+            var filename = splitted[1];
+            if (splitted[0]=='+'){
+                var size = splitted[2];
+                var color = splitted[3];
+
+                if (filename=='' || filename=='*'){
+                    filename = 'File_'+automatic_file_number;
+                    automatic_file_number++;
+                }
+                size = parseInt(size);
+                if (color=='' || color=='*'){
+                    color = automatic_file_color;
+                    automatic_file_color++;
+                }
+                console.log(color);
+                color = parseInt(color);
+                console.log(color);
+                color = color_to_class(palette[color%18]);
+                console.log(color);
+                addFile(filename, size, color);
+            }
+            else if (splitted[0]=='-'){
+                removeFile(filename);
+            }
+            else {error_messages.append(code[line]+'\n');}
+        } catch (e) {
+            error_messages.append(code[line]+'\n');
+        }
+    }
+}
