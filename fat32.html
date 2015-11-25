@@ -43,9 +43,9 @@
 
 <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
     <a href="index.html"><li class="mdl-menu__item" data-i18n="home">Home | How to use</li></a>
-    <a href="fat12.html"><li class="mdl-menu__item">FAT12</li></a>
-    <a href="fat16.html"><li class="mdl-menu__item">FAT16</li></a>
-    <a href="fat32.html"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="fat12.html?"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="fat16.html?"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="fat32.html?"><li class="mdl-menu__item">FAT32</li></a>
     <a href="compare.html"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
 </ul>
 
@@ -59,9 +59,9 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="index.html" data-i18n="home">Home | How to use</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html">FAT12</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html">FAT16</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html?">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html?">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html?">FAT32</a>
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="compare.html" data-i18n="compare">Compare</a>
 
                 <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
@@ -169,7 +169,7 @@
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
-                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <table class="mdl-data-table mdl-data-table__select mdl-typography--text-left ">
                                         <thead>
                                         <tr>
                                             <th class="align-left" data-i18n="file-list-header">Files:</th>
@@ -180,9 +180,8 @@
                                     </table>
                                 </div>
                                 <div class="overflow-table table-body">
-                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                    <table class="mdl-data-table mdl-data-table__select mdl-typography--text-left expand-v">
                                         <tbody id="file-list-container">
-                                        <!-- example file entry <tr> <td class="file-entry"><a href="#"><i class="material-icons">close</i></a> File 1</td> </tr>-->
                                         </tbody>
                                     </table>
                                 </div>
@@ -194,7 +193,7 @@
                             </div>
                             <div class="mdl-cell mdl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
-                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <table class="mdl-data-table mdl-data-table__select mdl-typography--text-left ">
                                         <thead>
                                         <tr>
                                             <th data-i18n="fat-table-header-index">FAT Index</th>
@@ -204,16 +203,15 @@
                                     </table>
                                 </div>
                                 <div class="overflow-table table-body">
-                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left expand-v">
+                                    <table class="mdl-data-table mdl-data-table__select mdl-typography--text-left expand-v">
                                         <tbody id="fat-container">
-                                        <!-- example file entry: <tr> <td class="fat-entry">File 1</td> </tr>-->
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="mdl-cell mhl-cell--4-col file-table mdl-shadow--2dp">
                                 <div class="table-header">
-                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table__select mdl-typography--text-left ">
+                                    <table class="mdl-data-table mdl-data-table__select mdl-typography--text-left ">
                                         <thead>
                                         <tr>
                                             <th class="align-left" data-i18n="disc-blocks-header">Disk blocks:</th>
@@ -222,7 +220,6 @@
                                     </table>
                                 </div>
                                 <div id="disk-container" class="overflow-table">
-                                    <!-- example disk entry: <div class="block-cluster"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -303,9 +300,6 @@
                 </div>
                 <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
                     <input type='text' id="file-color" class="spectrum" />
-                    <!-- <button class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-blue-grey">
-                        <i class="material-icons">color_lens</i> <span data-i18n="select-color"></span>
-                    </button> -->
                 </div>
                 <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
                     <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
@@ -326,7 +320,6 @@
 <link rel="stylesheet" href="assets/styles/spectrum_override.css">
 <script type="text/javascript" src="assets/js/frontend/spectrum.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="assets/js/frontend/language_selector.js"></script>
 <script src="assets/js/frontend/flipcard.js"></script>
 <script src="assets/js/frontend/configdisk-frontend.js"></script>
@@ -341,6 +334,5 @@
 <script src="assets/js/backend/FileList.js"></script>
 <script src="assets/js/backend/FileSystem.js"></script>
 <script src="assets/js/frontend/activate-sidecard.js"></script>
-<script src="assets/js/frontend/multiple-hover-files.js"></script>
 </body>
 </html>
