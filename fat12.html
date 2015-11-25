@@ -43,9 +43,9 @@
 
 <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" for="nav-button">
     <a href="index.html"><li class="mdl-menu__item" data-i18n="home">Home | How to use</li></a>
-    <a href="fat12.html?"><li class="mdl-menu__item">FAT12</li></a>
-    <a href="fat16.html?"><li class="mdl-menu__item">FAT16</li></a>
-    <a href="fat32.html?"><li class="mdl-menu__item">FAT32</li></a>
+    <a href="fat12.html"><li class="mdl-menu__item">FAT12</li></a>
+    <a href="fat16.html"><li class="mdl-menu__item">FAT16</li></a>
+    <a href="fat32.html"><li class="mdl-menu__item">FAT32</li></a>
     <a href="compare.html"><li class="mdl-menu__item" data-i18n="compare">Compare</li></a>
 </ul>
 
@@ -59,9 +59,9 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="index.html" data-i18n="home">Home | How to use</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html?">FAT12</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html?">FAT16</a>
-                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html?">FAT32</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat12.html">FAT12</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat16.html">FAT16</a>
+                <a class="mdl-navigation__link mdl-layout--large-screen-only" href="fat32.html">FAT32</a>
                 <a class="mdl-navigation__link mdl-layout--large-screen-only" href="compare.html" data-i18n="compare">Compare</a>
 
                 <button id="more-options" class="mdl-button mdl-js-button mdl-button--icon">
@@ -270,17 +270,15 @@
     <div class="mdl-card mdl-shadow--8dp">
 
         <div class="mdl-grid">
-            <form action="#">
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center mdl-textfield mdl-js-textfield">
-                    <textarea class="mdl-textfield__input" type="text" rows= "10" id="codearea"></textarea>
-                    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
-                </div>
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <button onclick="handle_run_script_code()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
-                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
-                    </button>
-                </div>
-            </form>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows= "10" id="codearea"></textarea>
+                <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+            </div>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                <button onclick="handle_run_script_code()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                    <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                </button>
+            </div>
         </div>
         <a href="#close" class="close"><i class="material-icons">close</i></a>
     </div>
@@ -289,28 +287,26 @@
     <div class="mdl-card mdl-shadow--8dp">
 
         <div class="mdl-grid">
-            <form action="#">
-                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="add-file-name" />
-                    <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
-                </div>
-                <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="^[1-9](?:[0-9]?)+$" id="add-file-size" value="512" />
-                    <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
-                    <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
-                </div>
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <input type='text' id="file-color" class="spectrum" />
-                </div>
-                <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
-                    <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
-                        <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
-                    </a>
-                    <button onclick="handle_apply_add_file()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
-                        <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
-                    </button>
-                </div>
-            </form>
+            <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="add-file-name" />
+                <label class="mdl-textfield__label" for="add-file-name" data-i18n="enter-file-name"></label>
+            </div>
+            <div class="mdl-cell--12-col mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" pattern="^[1-9](?:[0-9]?)+$" id="add-file-size" value="512" />
+                <label class="mdl-textfield__label" for="add-file-size" data-i18n="enter-file-size"></label>
+                <span class="mdl-textfield__error" data-i18n="not-a-number-error">Input is not a number!</span>
+            </div>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                <input type='text' id="file-color" class="spectrum" />
+            </div>
+            <div class="mdl-cell--12-col mdl-cell modal-dialog-center">
+                <a href="#close" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-red">
+                    <i class="material-icons">cancel</i> <span data-i18n="cancel"></span>
+                </a>
+                <button onclick="handle_apply_add_file()" class="modal-button mdl-card--expand mdl-js-button mdl-button--raised color-green">
+                    <i class="material-icons">check_circle</i> <span data-i18n="apply"></span>
+                </button>
+            </div>
         </div>
         <a href="#close" class="close"><i class="material-icons">close</i></a>
     </div>
