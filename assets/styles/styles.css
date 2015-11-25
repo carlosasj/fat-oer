@@ -388,3 +388,12 @@ button.modal-button {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.help-toggle {
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.help-toggle-destiny {
+    display: none;
+}
